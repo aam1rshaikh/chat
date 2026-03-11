@@ -321,66 +321,55 @@ body::before {
 }
 
 @media (max-width: 440px) {
-  body {
-    padding: 8px 0 16px;
-    gap: 8px;
-    background: #1a0a1e;
-    min-height: 100svh;
+  html, body {
+    height: 100%; height: 100svh;
+    padding: 0; gap: 0; overflow: hidden;
   }
 
-  /* Top nav — full width, compact */
-  .top-nav {
-    max-width: 100%;
-    padding: 0 10px;
-    gap: 6px;
-    width: 100%;
-  }
-  .title-card {
-    padding: 7px 14px 6px;
-  }
-  .title-names { font-size: 14px; }
-  .title-page { font-size: 10px; }
-  .title-dates { font-size: 11px; }
+  /* Hide everything except the phone */
+  .top-nav, .bottom-nav, .hearts-bg { display: none; }
 
-  .nav-row { gap: 5px; }
-  .select-wrap { flex: 1; min-width: 0; }
-  .select-wrap::before { font-size: 10px; left: 9px; }
-  .nav-btn { padding: 6px 10px; font-size: 12px; flex-shrink: 0; }
-  .bookmark-btn { padding: 6px 10px; font-size: 12px; flex-shrink: 0; gap: 4px; }
-  .page-select { font-size: 11px; padding: 6px 6px 6px 22px; }
-
-  /* Bookmark badge — show it, just smaller */
-  .bookmark-badge {
-    font-size: 10px;
-    display: inline-flex !important;
-  }
-
-  /* Phone — scaled down to fit mobile with frame intact */
+  /* Phone = full screen native chat */
   .phone {
-    width: calc(100vw - 16px);
-    height: calc(100svh - 180px);
-    min-height: 500px;
-    border-radius: 36px;
-    box-shadow:
-      0 0 0 8px #1e0022,
-      0 0 0 10px #2e0038,
-      0 0 0 12px rgba(180,0,120,0.15),
-      0 16px 48px rgba(120,0,80,0.6);
-    margin: 0 auto;
+    width: 100vw;
+    height: 100svh;
+    border-radius: 0;
+    box-shadow: none;
+    margin: 0;
+    position: fixed;
+    top: 0; left: 0;
   }
 
-  /* Keep status bar — it's part of the frame look */
-  .status-bar { display: flex; }
+  /* Keep status bar hidden */
+  .status-bar { display: none; }
 
-  /* Bottom nav — show it below the phone */
-  .bottom-nav {
-    display: flex;
-    max-width: 100%;
-    padding: 0 10px;
+  /* Header = nav controls built in */
+  .header {
+    padding: 10px 14px;
+    position: relative;
   }
 
-  .input-bar { padding: 8px 10px 14px; }
-  .scroll-btn { bottom: 70px; right: 12px; width: 34px; height: 34px; font-size: 16px; }
+  /* Inject page nav into header via JS-added element */
+  .mobile-page-nav {
+    display: flex; align-items: center; gap: 6px;
+    margin-left: auto; flex-shrink: 0;
+  }
+  .mobile-page-nav button {
+    background: rgba(180,0,120,0.3);
+    border: 1px solid rgba(255,80,160,0.3);
+    color: #ffb0d8; border-radius: 14px;
+    padding: 4px 10px; font-size: 12px; cursor: pointer;
+    font-family: 'Inter', sans-serif;
+  }
+  .mobile-page-nav button:disabled { opacity: 0.25; cursor: default; }
+  .mobile-page-nav .page-info {
+    font-size: 11px; color: rgba(255,160,210,0.6);
+    letter-spacing: 0.5px; white-space: nowrap;
+  }
+
+  .messages-area { flex: 1; }
+  .input-bar { padding: 8px 12px env(safe-area-inset-bottom, 12px); }
+  .scroll-btn { bottom: 72px; right: 14px; }
 }
 </style>
 </head>
@@ -645,6 +634,73 @@ function goPage(n){
 function scrollToBottom(){document.getElementById('messagesArea').scrollTo({top:999999999,behavior:'smooth'});}
 document.getElementById('messagesArea').addEventListener('scroll',function(){document.getElementById('scrollBtn').classList.toggle('visible',this.scrollHeight-this.scrollTop-this.clientHeight>200);});
 updateNav();goPage(1);
+
+// ── Mobile: inject page nav into chat header ──────────────
+if (window.innerWidth <= 440) {
+  const headerActions = document.querySelector('.header-actions');
+  const mobileNav = document.createElement('div');
+  mobileNav.className = 'mobile-page-nav';
+  mobileNav.innerHTML = `
+    <button id="mPrev" onclick="goPage(currentPage-1)" disabled>&#8592;</button>
+    <span class="page-info" id="mPageInfo">1 / 278</span>
+    <button id="mNext" onclick="goPage(currentPage+1)">&#8594;</button>
+    <button id="mBookmarkBtn" onclick="saveBookmark()" style="background:rgba(180,0,120,0.3);border:1px solid rgba(255,80,160,0.3);color:#ffb0d8;border-radius:14px;padding:4px 8px;font-size:12px;cursor:pointer;font-family:inherit;">🔖</button>
+  `;
+  headerActions.parentNode.insertBefore(mobileNav, headerActions);
+  headerActions.style.display = 'none';
+
+  // Bookmark bar — sits between header and messages
+  const messagesArea = document.getElementById('messagesArea');
+  const bookmarkBar = document.createElement('div');
+  bookmarkBar.id = 'mBookmarkBar';
+  bookmarkBar.style.cssText = `
+    display:none; align-items:center; justify-content:space-between;
+    padding:5px 14px; font-size:11px; font-family:'Inter',sans-serif;
+    color:rgba(255,160,210,0.75); font-style:italic;
+    background:rgba(60,0,50,0.6); border-bottom:1px solid rgba(220,80,160,0.15);
+    flex-shrink:0;
+  `;
+  bookmarkBar.innerHTML = `
+    <span>♥ saved at page <span id="mBookmarkPage"></span></span>
+    <button onclick="removeBookmark()" style="background:none;border:none;color:rgba(255,100,160,0.7);cursor:pointer;font-size:11px;font-family:inherit;padding:0;">✕ remove</button>
+  `;
+  messagesArea.parentNode.insertBefore(bookmarkBar, messagesArea);
+
+  // Override updateBookmarkBadge to also update mobile bar
+  const _updateBookmarkBadge = updateBookmarkBadge;
+  window.updateBookmarkBadge = function() {
+    _updateBookmarkBadge();
+    const raw = localStorage.getItem(BOOKMARK_KEY);
+    const bar = document.getElementById('mBookmarkBar');
+    const pg = document.getElementById('mBookmarkPage');
+    const btn = document.getElementById('mBookmarkBtn');
+    if (!bar) return;
+    if (!raw) {
+      bar.style.display = 'none';
+      if (btn) { btn.textContent = '🔖'; btn.style.background = 'rgba(180,0,120,0.3)'; btn.style.borderColor = 'rgba(255,80,160,0.3)'; }
+    } else {
+      const data = JSON.parse(raw);
+      if (pg) pg.textContent = data.page;
+      bar.style.display = 'flex';
+      if (btn) { btn.textContent = '✓'; btn.style.background = 'rgba(160,0,100,0.45)'; btn.style.borderColor = 'rgba(255,80,160,0.5)'; }
+    }
+  };
+
+  // Override updateNav to also update mobile controls
+  const _updateNav = updateNav;
+  window.updateNav = function() {
+    _updateNav();
+    const mp = document.getElementById('mPageInfo');
+    const mb = document.getElementById('mPrev');
+    const mn = document.getElementById('mNext');
+    if (mp) mp.textContent = currentPage + ' / ' + NUM_PAGES;
+    if (mb) mb.disabled = currentPage === 1;
+    if (mn) mn.disabled = currentPage === NUM_PAGES;
+  };
+
+  // Trigger to populate bookmark bar on load
+  updateBookmarkBadge();
+}
 
 </script>
 </body>
