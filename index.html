@@ -321,51 +321,66 @@ body::before {
 }
 
 @media (max-width: 440px) {
-  body { padding: 0; gap: 0; background: #0d001a; }
+  body {
+    padding: 8px 0 16px;
+    gap: 8px;
+    background: #1a0a1e;
+    min-height: 100svh;
+  }
 
-  /* Hide desktop-only elements */
-  .bottom-nav { display: none; }
-  .title-card { display: none; }
-  .bookmark-badge { display: none !important; }
-  .hearts-bg { display: none; }
-
-  /* Fixed slim nav — single row, ~44px tall */
+  /* Top nav — full width, compact */
   .top-nav {
-    position: fixed; top: 0; left: 0; right: 0; z-index: 100;
-    max-width: 100%; padding: 5px 8px;
-    background: rgba(18,0,18,0.98);
-    backdrop-filter: blur(20px);
-    border-bottom: 1px solid rgba(220,80,160,0.25);
-    gap: 0;
+    max-width: 100%;
+    padding: 0 10px;
+    gap: 6px;
+    width: 100%;
   }
-  .nav-row {
-    gap: 5px; width: 100%;
+  .title-card {
+    padding: 7px 14px 6px;
   }
+  .title-names { font-size: 14px; }
+  .title-page { font-size: 10px; }
+  .title-dates { font-size: 11px; }
+
+  .nav-row { gap: 5px; }
   .select-wrap { flex: 1; min-width: 0; }
   .select-wrap::before { font-size: 10px; left: 9px; }
-  .nav-btn {
-    padding: 6px 11px; font-size: 13px; flex-shrink: 0;
-    border-radius: 16px;
-  }
-  .bookmark-btn {
-    padding: 6px 11px; font-size: 12px; flex-shrink: 0;
-    border-radius: 16px; gap: 4px;
-  }
-  .page-select {
-    font-size: 11px; padding: 6px 6px 6px 22px;
-    border-radius: 16px;
+  .nav-btn { padding: 6px 10px; font-size: 12px; flex-shrink: 0; }
+  .bookmark-btn { padding: 6px 10px; font-size: 12px; flex-shrink: 0; gap: 4px; }
+  .page-select { font-size: 11px; padding: 6px 6px 6px 22px; }
+
+  /* Bookmark badge — show it, just smaller */
+  .bookmark-badge {
+    font-size: 10px;
+    display: inline-flex !important;
   }
 
-  /* Phone fills everything below nav */
+  /* Phone — scaled down to fit mobile with frame intact */
   .phone {
-    width: 100vw;
-    height: calc(100svh - 46px);
-    margin-top: 46px;
-    border-radius: 0;
-    box-shadow: none;
+    width: calc(100vw - 16px);
+    height: calc(100svh - 180px);
+    min-height: 500px;
+    border-radius: 36px;
+    box-shadow:
+      0 0 0 8px #1e0022,
+      0 0 0 10px #2e0038,
+      0 0 0 12px rgba(180,0,120,0.15),
+      0 16px 48px rgba(120,0,80,0.6);
+    margin: 0 auto;
   }
-  .status-bar { display: none; }
-  .input-bar { padding: 8px 12px env(safe-area-inset-bottom, 10px); }
+
+  /* Keep status bar — it's part of the frame look */
+  .status-bar { display: flex; }
+
+  /* Bottom nav — show it below the phone */
+  .bottom-nav {
+    display: flex;
+    max-width: 100%;
+    padding: 0 10px;
+  }
+
+  .input-bar { padding: 8px 10px 14px; }
+  .scroll-btn { bottom: 70px; right: 12px; width: 34px; height: 34px; font-size: 16px; }
 }
 </style>
 </head>
