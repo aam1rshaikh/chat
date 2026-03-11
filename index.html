@@ -192,6 +192,7 @@ body::before {
   display: flex; align-items: center; gap: 12px; flex-shrink: 0;
   border-bottom: 1px solid rgba(200,60,140,0.25);
   backdrop-filter: blur(12px);
+  position: sticky; top: 0; z-index: 10;
 }
 .back-btn { color: #ff80c0; font-size: 26px; cursor: pointer; line-height: 1; }
 .user-info { display: flex; align-items: center; gap: 10px; flex: 1; }
@@ -320,17 +321,37 @@ body::before {
 }
 
 @media (max-width: 440px) {
-  .phone { width: 100vw; border-radius: 0; height: calc(100svh - 130px); }
-  body { padding: 8px 0 0; gap: 6px; }
+  body { padding: 0; gap: 0; }
   .bottom-nav { display: none; }
-  .top-nav { padding: 0 8px; gap: 6px; }
-  .title-card { padding: 7px 12px 6px; }
-  .title-names { font-size: 14px; }
-  .nav-row { flex-wrap: wrap; gap: 6px; }
-  .select-wrap { order: 3; flex: 0 0 100%; }
-  .nav-btn { padding: 6px 12px; font-size: 12px; }
-  .bookmark-btn { padding: 6px 12px; font-size: 12px; margin-left: auto; }
-  .page-select { font-size: 11px; padding: 6px 8px 6px 24px; }
+  .top-nav {
+    position: fixed; top: 0; left: 0; right: 0; z-index: 100;
+    max-width: 100%; padding: 6px 8px;
+    background: rgba(20,0,20,0.96);
+    backdrop-filter: blur(16px);
+    border-bottom: 1px solid rgba(220,80,160,0.2);
+    gap: 4px;
+  }
+  .title-card { padding: 5px 10px 4px; border-radius: 10px; }
+  .title-names { font-size: 13px; }
+  .title-page, .title-dates { font-size: 10px; }
+  .nav-row { gap: 5px; }
+  .select-wrap { flex: 1; min-width: 0; }
+  .nav-btn { padding: 5px 10px; font-size: 12px; flex-shrink: 0; }
+  .bookmark-btn { padding: 5px 10px; font-size: 12px; flex-shrink: 0; }
+  .bookmark-badge { font-size: 10px; }
+  .page-select { font-size: 11px; padding: 5px 6px 5px 22px; }
+
+  /* Phone becomes invisible wrapper — chat fills screen */
+  .phone {
+    width: 100vw;
+    height: calc(100svh - 90px);
+    margin-top: 90px;
+    border-radius: 0;
+    box-shadow: none;
+  }
+  /* Hide decorative phone chrome on mobile */
+  .status-bar { display: none; }
+  .input-bar { padding: 8px 12px 12px; }
 }
 </style>
 </head>
