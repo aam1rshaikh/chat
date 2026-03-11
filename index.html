@@ -320,14 +320,16 @@ body::before {
 }
 
 @media (max-width: 440px) {
-  .phone { width: 100vw; border-radius: 0; height: calc(100svh - 110px); }
+  .phone { width: 100vw; border-radius: 0; height: calc(100svh - 130px); }
   body { padding: 8px 0 0; gap: 6px; }
   .bottom-nav { display: none; }
   .top-nav { padding: 0 8px; gap: 6px; }
   .title-card { padding: 7px 12px 6px; }
   .title-names { font-size: 14px; }
-  .nav-btn { padding: 6px 10px; font-size: 12px; }
-  .bookmark-btn { padding: 6px 10px; font-size: 12px; }
+  .nav-row { flex-wrap: wrap; gap: 6px; }
+  .select-wrap { order: 3; flex: 0 0 100%; }
+  .nav-btn { padding: 6px 12px; font-size: 12px; }
+  .bookmark-btn { padding: 6px 12px; font-size: 12px; margin-left: auto; }
   .page-select { font-size: 11px; padding: 6px 8px 6px 24px; }
 }
 </style>
@@ -356,7 +358,7 @@ body::before {
     <button class="nav-btn" id="nextBtnTop" onclick="goPage(currentPage+1)">&#8594;</button>
     <button class="bookmark-btn" id="bookmarkBtn" onclick="saveBookmark()" title="Save your place">🔖 Save</button>
   </div>
-  <div id="bookmarkBadge" class="bookmark-badge" style="display:none">♥ saved at page <span id="bookmarkBadgePage"></span></div>
+  <div id="bookmarkBadge" class="bookmark-badge" style="display:none">♥ saved at page <span id="bookmarkBadgePage"></span> &nbsp;<button onclick="removeBookmark()" style="background:none;border:none;color:rgba(255,100,160,0.6);cursor:pointer;font-size:11px;padding:0;font-family:inherit;">✕ remove</button></div>
 </div>
 
 <div class="phone">
@@ -464,6 +466,12 @@ function saveBookmark() {
   setTimeout(() => { btn.innerHTML = '🔖 Save'; btn.classList.remove('saved'); }, 1800);
   updateBookmarkBadge();
   showToast('Bookmark saved — page ' + currentPage + ' 🔖');
+}
+
+function removeBookmark() {
+  localStorage.removeItem(BOOKMARK_KEY);
+  updateBookmarkBadge();
+  showToast('Bookmark removed 🗑️');
 }
 
 function updateBookmarkBadge() {
