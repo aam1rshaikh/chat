@@ -321,37 +321,51 @@ body::before {
 }
 
 @media (max-width: 440px) {
-  body { padding: 0; gap: 0; }
+  body { padding: 0; gap: 0; background: #0d001a; }
+
+  /* Hide desktop-only elements */
   .bottom-nav { display: none; }
+  .title-card { display: none; }
+  .bookmark-badge { display: none !important; }
+  .hearts-bg { display: none; }
+
+  /* Fixed slim nav — single row, ~44px tall */
   .top-nav {
     position: fixed; top: 0; left: 0; right: 0; z-index: 100;
-    max-width: 100%; padding: 6px 8px;
-    background: rgba(20,0,20,0.96);
-    backdrop-filter: blur(16px);
-    border-bottom: 1px solid rgba(220,80,160,0.2);
-    gap: 4px;
+    max-width: 100%; padding: 5px 8px;
+    background: rgba(18,0,18,0.98);
+    backdrop-filter: blur(20px);
+    border-bottom: 1px solid rgba(220,80,160,0.25);
+    gap: 0;
   }
-  .title-card { padding: 5px 10px 4px; border-radius: 10px; }
-  .title-names { font-size: 13px; }
-  .title-page, .title-dates { font-size: 10px; }
-  .nav-row { gap: 5px; }
+  .nav-row {
+    gap: 5px; width: 100%;
+  }
   .select-wrap { flex: 1; min-width: 0; }
-  .nav-btn { padding: 5px 10px; font-size: 12px; flex-shrink: 0; }
-  .bookmark-btn { padding: 5px 10px; font-size: 12px; flex-shrink: 0; }
-  .bookmark-badge { font-size: 10px; }
-  .page-select { font-size: 11px; padding: 5px 6px 5px 22px; }
+  .select-wrap::before { font-size: 10px; left: 9px; }
+  .nav-btn {
+    padding: 6px 11px; font-size: 13px; flex-shrink: 0;
+    border-radius: 16px;
+  }
+  .bookmark-btn {
+    padding: 6px 11px; font-size: 12px; flex-shrink: 0;
+    border-radius: 16px; gap: 4px;
+  }
+  .page-select {
+    font-size: 11px; padding: 6px 6px 6px 22px;
+    border-radius: 16px;
+  }
 
-  /* Phone becomes invisible wrapper — chat fills screen */
+  /* Phone fills everything below nav */
   .phone {
     width: 100vw;
-    height: calc(100svh - 90px);
-    margin-top: 90px;
+    height: calc(100svh - 46px);
+    margin-top: 46px;
     border-radius: 0;
     box-shadow: none;
   }
-  /* Hide decorative phone chrome on mobile */
   .status-bar { display: none; }
-  .input-bar { padding: 8px 12px 12px; }
+  .input-bar { padding: 8px 12px env(safe-area-inset-bottom, 10px); }
 }
 </style>
 </head>
