@@ -321,37 +321,38 @@ body::before {
 }
 
 @media (max-width: 440px) {
-  body { padding: 12px 0 20px; gap: 10px; }
+  body { padding: 8px 0 8px; gap: 6px; }
 
-  .top-nav { padding: 0 10px; gap: 6px; max-width: 100%; }
-  .title-card { padding: 7px 14px 6px; }
-  .title-names { font-size: 14px; }
-  .title-page { font-size: 10px; }
-  .title-dates { font-size: 11px; }
+  .top-nav { padding: 0 10px; gap: 5px; max-width: 100%; }
+  .title-card { padding: 6px 12px 5px; }
+  .title-names { font-size: 13px; }
+  .title-page { font-size: 9px; }
+  .title-dates { font-size: 10px; }
+  .title-heart { display: none; }
 
-  .nav-row { gap: 5px; }
+  .nav-row { gap: 4px; }
   .select-wrap { flex: 1; min-width: 0; }
-  .nav-btn { padding: 5px 10px; font-size: 12px; }
-  .bookmark-btn { padding: 5px 10px; font-size: 12px; gap: 4px; }
-  .page-select { font-size: 11px; padding: 5px 6px 5px 22px; }
+  .nav-btn { padding: 5px 9px; font-size: 12px; }
+  .bookmark-btn { padding: 5px 9px; font-size: 12px; gap: 3px; }
+  .page-select { font-size: 10px; padding: 5px 4px 5px 20px; }
   .bookmark-badge { font-size: 10px; }
 
   .phone {
-    width: calc(100vw - 20px);
-    height: calc(100svh - 200px);
-    min-height: 480px;
-    border-radius: 40px;
+    width: calc(100vw - 16px);
+    height: calc(100svh - 155px);
+    min-height: 500px;
+    border-radius: 36px;
     box-shadow:
-      0 0 0 8px #1e0022,
-      0 0 0 10px #2e0038,
-      0 0 0 12px rgba(180,0,120,0.15),
-      0 16px 48px rgba(120,0,80,0.6);
+      0 0 0 7px #1e0022,
+      0 0 0 9px #2e0038,
+      0 0 0 11px rgba(180,0,120,0.15),
+      0 12px 40px rgba(120,0,80,0.6);
   }
 
   .bottom-nav { display: flex; max-width: 100%; padding: 0 10px; }
   .status-bar { display: flex; }
-  .input-bar { padding: 8px 10px 16px; }
-  .scroll-btn { bottom: 72px; right: 14px; width: 34px; height: 34px; font-size: 16px; }
+  .input-bar { padding: 6px 10px 12px; }
+  .scroll-btn { bottom: 68px; right: 12px; width: 34px; height: 34px; font-size: 16px; }
 }
 </style>
 </head>
@@ -616,6 +617,24 @@ function goPage(n){
 function scrollToBottom(){document.getElementById('messagesArea').scrollTo({top:999999999,behavior:'smooth'});}
 document.getElementById('messagesArea').addEventListener('scroll',function(){document.getElementById('scrollBtn').classList.toggle('visible',this.scrollHeight-this.scrollTop-this.clientHeight>200);});
 updateNav();goPage(1);
+
+// ── Mobile: set phone height precisely ──────────────────────
+if (window.innerWidth <= 440) {
+  function setPhoneHeight() {
+    const nav = document.querySelector('.top-nav');
+    const bottom = document.querySelector('.bottom-nav');
+    const navH = nav ? nav.getBoundingClientRect().height : 0;
+    const botH = bottom ? bottom.getBoundingClientRect().height : 0;
+    const bodyPad = 22; // top + bottom body padding + gaps
+    const phone = document.querySelector('.phone');
+    if (phone) {
+      const available = window.innerHeight - navH - botH - bodyPad;
+      phone.style.height = Math.max(available, 480) + 'px';
+    }
+  }
+  setTimeout(setPhoneHeight, 100);
+  window.addEventListener('resize', setPhoneHeight);
+}
 
 
 </script>
