@@ -42,6 +42,27 @@ body::before {
   100% { transform: translateY(-110vh) scale(1.1) rotate(10deg); opacity: 0; }
 }
 
+/* ── Sunset Banner ── */
+.sunset-banner {
+  width: 100%;
+  height: 56px;
+  position: relative;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  flex-shrink: 0;
+}
+.sunset-banner:hover {
+  filter: brightness(1.08);
+}
+.sunset-banner:hover .button-bg {
+  fill-opacity: 0.45;
+  stroke-opacity: 0.75;
+}
+.sunset-banner:active {
+  transform: scale(0.98);
+}
+
+
 /* ── Top nav ── */
 .top-nav {
   display: flex; flex-direction: column; align-items: center;
@@ -357,6 +378,84 @@ body::before {
 </style>
 </head>
 <body>
+
+<!-- Sunset Banner -->
+<div class="sunset-banner" onclick="goBackToHome()">
+  <svg viewBox="0 0 400 56" width="100%" height="56" xmlns="http://www.w3.org/2000/svg" style="display: block;">
+    <defs>
+      <linearGradient id="sunsetSky" x1="0" y1="0" x2="0" y2="1">
+        <stop offset="0%" stop-color="#1a0a2e"/>
+        <stop offset="35%" stop-color="#6b1a3a"/>
+        <stop offset="65%" stop-color="#c84a6a"/>
+        <stop offset="85%" stop-color="#e8784a"/>
+        <stop offset="100%" stop-color="#f5a060"/>
+      </linearGradient>
+      <radialGradient id="sunGlow" cx="50%" cy="100%" r="50%">
+        <stop offset="0%" stop-color="#ffe080" stop-opacity="0.6"/>
+        <stop offset="50%" stop-color="#ffb04a" stop-opacity="0.25"/>
+        <stop offset="100%" stop-color="#ff6030" stop-opacity="0"/>
+      </radialGradient>
+      <clipPath id="sunClip"><rect x="140" y="0" width="120" height="56"/></clipPath>
+    </defs>
+    <rect x="0" y="0" width="400" height="56" fill="url(#sunsetSky)"/>
+    <rect x="0" y="0" width="400" height="56" fill="url(#sunGlow)"/>
+    <circle cx="200" cy="58" r="18" fill="#ffcc44" clip-path="url(#sunClip)"/>
+    <circle cx="200" cy="58" r="14" fill="#ffdd66" clip-path="url(#sunClip)"/>
+    <path d="M0 44 Q40 32 80 40 Q120 48 160 36 Q200 24 240 38 Q280 52 320 40 Q360 28 400 36 L400 56 L0 56Z" fill="#2a0a1e"/>
+    <path d="M0 50 Q60 40 110 46 Q160 52 210 44 Q260 36 310 46 Q355 56 400 50 L400 56 L0 56Z" fill="#1a0614"/>
+    <path d="M32 14 Q34 11 36 14" fill="none" stroke="#1a0614" stroke-width="1.2" stroke-linecap="round"/>
+    <path d="M37 13 Q39 10 41 13" fill="none" stroke="#1a0614" stroke-width="1.2" stroke-linecap="round"/>
+    <path d="M42 15 Q44 12 46 15" fill="none" stroke="#1a0614" stroke-width="1.1" stroke-linecap="round"/>
+    <path d="M155 10 Q157 7 159 10" fill="none" stroke="#1a0614" stroke-width="1.2" stroke-linecap="round"/>
+    <path d="M161 9 Q163 6 165 9" fill="none" stroke="#1a0614" stroke-width="1.3" stroke-linecap="round"/>
+    <path d="M167 11 Q169 8 171 11" fill="none" stroke="#1a0614" stroke-width="1.1" stroke-linecap="round"/>
+    <path d="M160 15 Q162 12 164 15" fill="none" stroke="#1a0614" stroke-width="1" stroke-linecap="round"/>
+    <path d="M230 18 Q232 15 234 18" fill="none" stroke="#2a0a1e" stroke-width="1.2" stroke-linecap="round"/>
+    <path d="M236 16 Q238 13 240 16" fill="none" stroke="#2a0a1e" stroke-width="1.3" stroke-linecap="round"/>
+    <path d="M242 19 Q244 16 246 19" fill="none" stroke="#2a0a1e" stroke-width="1" stroke-linecap="round"/>
+    <g transform="translate(18,24)">
+      <path d="M10 18 Q16 22 14 28 Q12 32 8 30" fill="none" stroke="#e8720a" stroke-width="2.5" stroke-linecap="round"/>
+      <ellipse cx="9" cy="17" rx="8" ry="9" fill="#e8720a"/>
+      <ellipse cx="9" cy="19" rx="4.5" ry="5" fill="#f5c08a" opacity="0.7"/>
+      <ellipse cx="9" cy="7" rx="7" ry="6.5" fill="#e8720a"/>
+      <polygon points="3,3 1,-2 6,1" fill="#e8720a"/>
+      <polygon points="15,3 17,-2 12,1" fill="#e8720a"/>
+      <polygon points="3.5,2.5 2.2,-0.8 5.5,1.2" fill="#f0a0a0" opacity="0.8"/>
+      <polygon points="14.5,2.5 15.8,-0.8 12.5,1.2" fill="#f0a0a0" opacity="0.8"/>
+      <ellipse cx="6.5" cy="7" rx="2.2" ry="2.4" fill="#1a0a00"/>
+      <ellipse cx="11.5" cy="7" rx="2.2" ry="2.4" fill="#1a0a00"/>
+      <circle cx="5.8" cy="6.2" r="0.9" fill="white"/>
+      <circle cx="10.8" cy="6.2" r="0.9" fill="white"/>
+      <circle cx="7.2" cy="7.8" r="0.4" fill="white" opacity="0.6"/>
+      <circle cx="12.2" cy="7.8" r="0.4" fill="white" opacity="0.6"/>
+      <ellipse cx="9" cy="9.5" rx="1.1" ry="0.8" fill="#e05070"/>
+      <path d="M7.5 10.5 Q9 11.8 10.5 10.5" fill="none" stroke="#c03050" stroke-width="0.7" stroke-linecap="round"/>
+      <line x1="1" y1="9" x2="6" y2="9.8" stroke="#f5e0c0" stroke-width="0.6" opacity="0.8"/>
+      <line x1="1" y1="10.5" x2="6" y2="10.5" stroke="#f5e0c0" stroke-width="0.6" opacity="0.8"/>
+      <line x1="12" y1="9.8" x2="17" y2="9" stroke="#f5e0c0" stroke-width="0.6" opacity="0.8"/>
+      <line x1="12" y1="10.5" x2="17" y2="10.5" stroke="#f5e0c0" stroke-width="0.6" opacity="0.8"/>
+      <path d="M5 4 Q6 2 7 4" fill="none" stroke="#c85a00" stroke-width="0.6" opacity="0.6"/>
+      <path d="M11 4 Q12 2 13 4" fill="none" stroke="#c85a00" stroke-width="0.6" opacity="0.6"/>
+    </g>
+    <g transform="translate(326,26)" opacity="0.92">
+      <line x1="-4" y1="3" x2="-13" y2="3" stroke="#e87060" stroke-width="1" opacity="0.55"/>
+      <line x1="-4" y1="7" x2="-16" y2="7" stroke="#e87060" stroke-width="1.3" opacity="0.65"/>
+      <line x1="-4" y1="11" x2="-11" y2="11" stroke="#e87060" stroke-width="0.8" opacity="0.4"/>
+      <rect x="0" y="0" width="36" height="14" rx="7" fill="#c85070"/>
+      <circle cx="7" cy="16" r="4" fill="#1a0614"/>
+      <circle cx="29" cy="16" r="4" fill="#1a0614"/>
+      <circle cx="7" cy="16" r="1.8" fill="#6a3040"/>
+      <circle cx="29" cy="16" r="1.8" fill="#6a3040"/>
+      <circle cx="5" cy="5" r="2.5" fill="#ffe066" opacity="0.95"/>
+      <circle cx="31" cy="5" r="2.5" fill="#ffe066" opacity="0.95"/>
+      <circle cx="5" cy="5" r="1.2" fill="#111"/>
+      <circle cx="31" cy="5" r="1.2" fill="#111"/>
+    </g>
+    <rect class="button-bg" x="85" y="20" width="230" height="26" rx="13" fill="#ffffff" fill-opacity="0.35" stroke="#ffffff" stroke-opacity="0.6" stroke-width="1.5" style="transition: all 0.3s ease;"/>
+    <text x="200" y="37.5" text-anchor="middle" font-family="'Playfair Display',Georgia,serif" font-style="italic" font-size="14" fill="#ffffff" letter-spacing="1" font-weight="600">Back to Home Page</text>
+  </svg>
+</div>
+
 <div class="hearts-bg" id="heartsBg"></div>
 
 <div class="top-nav">
@@ -634,6 +733,12 @@ if (window.innerWidth <= 440) {
   }
   setTimeout(setPhoneHeight, 100);
   window.addEventListener('resize', setPhoneHeight);
+}
+
+// ── Back to Home navigation ──
+function goBackToHome() {
+  // Replace YOUR_MAIN_WEBSITE_URL with your actual main website URL
+  window.location.href = 'YOUR_MAIN_WEBSITE_URL#instagram-chat';
 }
 
 
