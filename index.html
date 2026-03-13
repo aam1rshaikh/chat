@@ -70,44 +70,103 @@ body::before {
   position: relative; z-index: 10;
 }
 
-/* Title card */
+/* Title card — Ghibli nature */
 .title-card {
-  text-align: center; padding: 10px 20px 8px;
-  background: rgba(60,0,50,0.45);
-  border: 1px solid rgba(220,80,160,0.2);
-  border-radius: 16px;
-  backdrop-filter: blur(12px);
+  text-align: center;
+  border-radius: 18px;
   width: 100%;
+  overflow: hidden;
+  position: relative;
+  box-shadow: 0 4px 24px rgba(0,60,30,0.35), 0 1px 0 rgba(255,255,255,0.08) inset;
+}
+.title-card-ghibli {
+  position: relative;
+  padding: 14px 20px 11px;
+  background: linear-gradient(160deg, #0d2a14 0%, #1a4a28 35%, #2d6b3a 65%, #1e3d20 100%);
+  overflow: hidden;
+}
+/* Soft sky glow */
+.title-card-ghibli::before {
+  content: '';
+  position: absolute; inset: 0;
+  background:
+    radial-gradient(ellipse at 50% 0%, rgba(180,230,120,0.18) 0%, transparent 60%),
+    radial-gradient(ellipse at 80% 100%, rgba(60,180,80,0.12) 0%, transparent 50%),
+    radial-gradient(ellipse at 20% 80%, rgba(255,200,100,0.08) 0%, transparent 40%);
+  pointer-events: none;
 }
 .title-names {
   font-family: 'Playfair Display', serif;
-  font-size: 17px; font-weight: 600;
-  color: #ffd6ee;
-  letter-spacing: 0.5px;
+  font-size: 20px; font-weight: 600;
+  color: #e8f5d0;
+  letter-spacing: 1px;
+  text-shadow: 0 1px 12px rgba(80,200,80,0.4), 0 0 30px rgba(150,255,100,0.15);
+  position: relative; z-index: 1;
 }
-.title-names .amp { color: rgba(255,130,190,0.7); font-style: italic; font-weight: 400; margin: 0 4px; }
+.title-names .amp {
+  color: rgba(180,255,140,0.75);
+  font-style: italic; font-weight: 400; margin: 0 6px;
+}
 .title-sub {
   display: flex; align-items: center; justify-content: center; gap: 6px;
-  margin-top: 3px;
+  margin-top: 4px; position: relative; z-index: 1;
 }
 .title-page {
   font-size: 11px; font-weight: 300;
-  color: rgba(255,160,210,0.55);
+  color: rgba(180,240,160,0.65);
   letter-spacing: 1.5px; text-transform: uppercase;
 }
-.title-sep { color: rgba(255,100,160,0.4); font-size: 10px; }
+.title-sep { color: rgba(120,200,80,0.4); font-size: 10px; }
 .title-dates {
   font-size: 12px; font-weight: 400;
-  color: rgba(255,180,220,0.65);
-  font-style: italic;
-  letter-spacing: 0.3px;
+  color: rgba(200,255,180,0.7);
+  font-style: italic; letter-spacing: 0.3px;
 }
-.title-heart { color: rgba(255,80,140,0.5); font-size: 9px; }
+.title-heart { color: rgba(120,220,80,0.5); font-size: 9px; }
+/* Bottom grass strip */
+.title-grass {
+  width: 100%; height: 28px; display: block;
+  background: linear-gradient(180deg, #1e4a26 0%, #2d6b38 100%);
+  position: relative; overflow: hidden; flex-shrink: 0;
+}
 
 /* Nav row */
 .nav-row {
   display: flex; align-items: center; gap: 8px; width: 100%;
 }
+/* Page jump input */
+.jump-row {
+  display: flex; align-items: center; gap: 6px;
+  width: 100%; justify-content: center;
+}
+.jump-label {
+  font-size: 11px; color: rgba(180,240,160,0.6);
+  font-family: 'Inter', sans-serif; letter-spacing: 0.3px; white-space: nowrap;
+}
+.jump-input {
+  width: 68px;
+  background: rgba(10,40,15,0.7);
+  border: 1px solid rgba(100,200,80,0.3);
+  color: rgba(200,255,180,0.9);
+  padding: 5px 10px; border-radius: 16px; font-size: 13px;
+  outline: none; font-family: 'Inter', sans-serif; text-align: center;
+  backdrop-filter: blur(8px);
+  transition: border-color 0.2s, box-shadow 0.2s;
+}
+.jump-input:focus {
+  border-color: rgba(120,220,80,0.6);
+  box-shadow: 0 0 0 2px rgba(100,200,60,0.15);
+}
+.jump-btn {
+  background: rgba(20,80,30,0.7);
+  border: 1px solid rgba(100,200,80,0.3);
+  color: rgba(200,255,180,0.9);
+  padding: 5px 14px; border-radius: 16px; font-size: 12px;
+  cursor: pointer; font-family: 'Inter', sans-serif;
+  transition: all 0.2s; white-space: nowrap;
+  backdrop-filter: blur(8px);
+}
+.jump-btn:hover { background: rgba(30,110,40,0.8); border-color: rgba(120,220,80,0.5); }
 .nav-btn {
   background: rgba(80,0,60,0.55);
   border: 1px solid rgba(220,80,160,0.25);
@@ -357,6 +416,10 @@ body::before {
   .bookmark-btn { padding: 5px 9px; font-size: 12px; gap: 3px; }
   .page-select { font-size: 10px; padding: 5px 4px 5px 20px; }
   .bookmark-badge { font-size: 10px; }
+  .jump-row { gap: 5px; }
+  .jump-label { font-size: 10px; }
+  .jump-input { width: 58px; font-size: 12px; padding: 4px 8px; }
+  .jump-btn { padding: 4px 10px; font-size: 11px; }
 
   .phone {
     width: calc(100vw - 16px);
@@ -460,15 +523,69 @@ body::before {
 
 <div class="top-nav">
   <div class="title-card">
-    <div class="title-names">
-      Aamir Shaikh <span class="amp">&amp;</span> Bushra Khan
-    </div>
-    <div class="title-sub">
-      <span class="title-heart">♥</span>
-      <span class="title-page" id="titlePage">Page 1 of 395</span>
-      <span class="title-sep">·</span>
-      <span class="title-dates" id="titleDates"></span>
-      <span class="title-heart">♥</span>
+    <div class="title-card-ghibli">
+      <!-- Fireflies -->
+      <svg style="position:absolute;inset:0;width:100%;height:100%;pointer-events:none;z-index:0" viewBox="0 0 400 70" xmlns="http://www.w3.org/2000/svg">
+        <!-- Trees left -->
+        <ellipse cx="18" cy="52" rx="13" ry="16" fill="#1a4a20" opacity="0.9"/>
+        <ellipse cx="18" cy="44" rx="10" ry="13" fill="#2a6030" opacity="0.85"/>
+        <rect x="16" y="60" width="4" height="10" fill="#0d2a10"/>
+        <ellipse cx="38" cy="56" rx="10" ry="12" fill="#1e5228" opacity="0.9"/>
+        <ellipse cx="38" cy="49" rx="8" ry="10" fill="#286838" opacity="0.8"/>
+        <rect x="36" y="62" width="3" height="8" fill="#0d2a10"/>
+        <!-- Trees right -->
+        <ellipse cx="382" cy="52" rx="13" ry="16" fill="#1a4a20" opacity="0.9"/>
+        <ellipse cx="382" cy="44" rx="10" ry="13" fill="#2a6030" opacity="0.85"/>
+        <rect x="380" y="60" width="4" height="10" fill="#0d2a10"/>
+        <ellipse cx="362" cy="56" rx="10" ry="12" fill="#1e5228" opacity="0.9"/>
+        <ellipse cx="362" cy="49" rx="8" ry="10" fill="#286838" opacity="0.8"/>
+        <rect x="360" y="62" width="3" height="8" fill="#0d2a10"/>
+        <!-- Moon -->
+        <circle cx="200" cy="12" r="7" fill="#fffbe0" opacity="0.18"/>
+        <circle cx="200" cy="12" r="5" fill="#fffbe0" opacity="0.25"/>
+        <!-- Stars -->
+        <circle cx="80" cy="10" r="1" fill="#e8ffcc" opacity="0.5"/>
+        <circle cx="130" cy="6" r="0.8" fill="#e8ffcc" opacity="0.4"/>
+        <circle cx="270" cy="8" r="1" fill="#e8ffcc" opacity="0.45"/>
+        <circle cx="320" cy="5" r="0.8" fill="#e8ffcc" opacity="0.35"/>
+        <circle cx="160" cy="15" r="0.7" fill="#e8ffcc" opacity="0.3"/>
+        <circle cx="240" cy="18" r="0.7" fill="#e8ffcc" opacity="0.3"/>
+        <!-- Fireflies -->
+        <circle cx="65" cy="35" r="1.5" fill="#ccff66" opacity="0.7"><animate attributeName="opacity" values="0.7;0.1;0.7" dur="2.1s" repeatCount="indefinite"/></circle>
+        <circle cx="110" cy="25" r="1.2" fill="#aaff44" opacity="0.6"><animate attributeName="opacity" values="0.6;0.05;0.6" dur="1.7s" repeatCount="indefinite"/></circle>
+        <circle cx="290" cy="30" r="1.5" fill="#ccff66" opacity="0.65"><animate attributeName="opacity" values="0.65;0.1;0.65" dur="2.4s" repeatCount="indefinite"/></circle>
+        <circle cx="335" cy="22" r="1.2" fill="#aaff44" opacity="0.55"><animate attributeName="opacity" values="0.55;0.05;0.55" dur="1.9s" repeatCount="indefinite"/></circle>
+        <circle cx="180" cy="40" r="1" fill="#ddff88" opacity="0.5"><animate attributeName="opacity" values="0.5;0.05;0.5" dur="3s" repeatCount="indefinite"/></circle>
+        <circle cx="220" cy="35" r="1" fill="#ddff88" opacity="0.45"><animate attributeName="opacity" values="0.45;0.05;0.45" dur="2.6s" repeatCount="indefinite"/></circle>
+        <!-- Ground / meadow -->
+        <path d="M0 64 Q50 56 100 62 Q150 68 200 60 Q250 52 300 62 Q350 70 400 62 L400 70 L0 70Z" fill="#1a4a20" opacity="0.9"/>
+        <path d="M0 67 Q60 60 120 65 Q180 70 240 63 Q300 56 360 65 Q380 68 400 65 L400 70 L0 70Z" fill="#0d2a10" opacity="0.8"/>
+        <!-- Grass blades -->
+        <path d="M55 64 Q57 56 59 64" fill="none" stroke="#4a9a30" stroke-width="1.2" stroke-linecap="round"/>
+        <path d="M72 65 Q74 57 76 65" fill="none" stroke="#3a8a20" stroke-width="1" stroke-linecap="round"/>
+        <path d="M145 63 Q147 55 149 63" fill="none" stroke="#4a9a30" stroke-width="1.2" stroke-linecap="round"/>
+        <path d="M255 63 Q257 56 259 63" fill="none" stroke="#4a9a30" stroke-width="1.1" stroke-linecap="round"/>
+        <path d="M325 64 Q327 57 329 64" fill="none" stroke="#3a8a20" stroke-width="1" stroke-linecap="round"/>
+        <!-- Totoro silhouette (tiny, right side) -->
+        <ellipse cx="355" cy="61" rx="5" ry="6" fill="#0d2a10" opacity="0.6"/>
+        <ellipse cx="353" cy="57" rx="2" ry="3" fill="#0d2a10" opacity="0.6"/>
+        <ellipse cx="357" cy="57" rx="2" ry="3" fill="#0d2a10" opacity="0.6"/>
+        <circle cx="352.5" cy="55.5" r="1" fill="#0d2a10" opacity="0.6"/>
+        <circle cx="357.5" cy="55.5" r="1" fill="#0d2a10" opacity="0.6"/>
+        <!-- Soot sprites -->
+        <circle cx="88" cy="62" r="2" fill="#0a1a08" opacity="0.5"/>
+        <circle cx="93" cy="64" r="1.5" fill="#0a1a08" opacity="0.4"/>
+      </svg>
+      <div class="title-names" style="position:relative;z-index:1">
+        Bushra <span class="amp">&amp;</span> Aamir
+      </div>
+      <div class="title-sub">
+        <span class="title-heart">🌿</span>
+        <span class="title-page" id="titlePage">Page 1 of 615</span>
+        <span class="title-sep">·</span>
+        <span class="title-dates" id="titleDates"></span>
+        <span class="title-heart">🌿</span>
+      </div>
     </div>
   </div>
   <div class="nav-row">
@@ -478,6 +595,12 @@ body::before {
     </div>
     <button class="nav-btn" id="nextBtnTop" onclick="goPage(currentPage+1)">&#8594;</button>
     <button class="bookmark-btn" id="bookmarkBtn" onclick="saveBookmark()" title="Save your place">🔖 Save</button>
+  </div>
+  <div class="jump-row">
+    <span class="jump-label">Go to page:</span>
+    <input class="jump-input" type="number" id="jumpInput" min="1" max="615" placeholder="e.g. 42"
+      onkeydown="if(event.key==='Enter') jumpToPage()"/>
+    <button class="jump-btn" onclick="jumpToPage()">Go ➜</button>
   </div>
   <div id="bookmarkBadge" class="bookmark-badge" style="display:none">♥ saved at page <span id="bookmarkBadgePage"></span> &nbsp;<button onclick="removeBookmark()" style="background:none;border:none;color:rgba(255,100,160,0.6);cursor:pointer;font-size:11px;padding:0;font-family:inherit;">✕ remove</button></div>
 </div>
@@ -733,6 +856,20 @@ if (window.innerWidth <= 440) {
   }
   setTimeout(setPhoneHeight, 100);
   window.addEventListener('resize', setPhoneHeight);
+}
+
+// ── Jump to page ──
+function jumpToPage() {
+  const inp = document.getElementById('jumpInput');
+  const n = parseInt(inp.value);
+  if (!n || n < 1 || n > NUM_PAGES) {
+    inp.style.borderColor = 'rgba(255,80,80,0.6)';
+    inp.style.boxShadow = '0 0 0 2px rgba(255,60,60,0.15)';
+    setTimeout(() => { inp.style.borderColor = ''; inp.style.boxShadow = ''; }, 1200);
+    return;
+  }
+  goPage(n);
+  inp.value = '';
 }
 
 // ── Back to Home navigation ──
