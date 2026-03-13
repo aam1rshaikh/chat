@@ -1,31 +1,31 @@
 [
   {
     "sender": "Bushra Khan",
-    "text": "With eggs",
-    "time": "Aug 17, 2024 12:10 pm",
-    "kind": "msg"
-  },
-  {
-    "sender": "Bushra Khan",
     "text": "Fried",
     "time": "Aug 17, 2024 12:10 pm",
     "kind": "msg"
   },
   {
     "sender": "Bushra Khan",
-    "text": "R",
+    "text": "With eggs",
+    "time": "Aug 17, 2024 12:10 pm",
+    "kind": "msg"
+  },
+  {
+    "sender": "Bushra Khan",
+    "text": "A",
     "time": "Aug 17, 2024 12:17 pm",
     "kind": "msg",
     "reactions": [
       {
         "reactor": "Aamir | عامر",
-        "emoji": "❤"
+        "emoji": "❤️"
       }
     ]
   },
   {
     "sender": "Bushra Khan",
-    "text": "I",
+    "text": "A",
     "time": "Aug 17, 2024 12:17 pm",
     "kind": "msg"
   },
@@ -37,37 +37,19 @@
   },
   {
     "sender": "Bushra Khan",
-    "text": "A",
+    "text": "I",
     "time": "Aug 17, 2024 12:17 pm",
     "kind": "msg"
   },
   {
     "sender": "Bushra Khan",
-    "text": "A",
+    "text": "R",
     "time": "Aug 17, 2024 12:17 pm",
     "kind": "msg",
     "reactions": [
       {
         "reactor": "Aamir | عامر",
-        "emoji": "❤"
-      }
-    ]
-  },
-  {
-    "sender": "Bushra Khan",
-    "text": "Yepp",
-    "time": "Aug 17, 2024 12:24 pm",
-    "kind": "msg"
-  },
-  {
-    "sender": "Aamir | عامر",
-    "text": "Cool",
-    "time": "Aug 17, 2024 12:24 pm",
-    "kind": "msg",
-    "reactions": [
-      {
-        "reactor": "Bushra Khan",
-        "emoji": "❤"
+        "emoji": "❤️"
       }
     ]
   },
@@ -79,25 +61,31 @@
     "reactions": [
       {
         "reactor": "Bushra Khan",
-        "emoji": "❤"
+        "emoji": "❤️"
       }
     ]
   },
   {
     "sender": "Aamir | عامر",
-    "text": "I had too much",
-    "time": "Aug 17, 2024 12:25 pm",
-    "kind": "msg"
-  },
-  {
-    "sender": "Aamir | عامر",
-    "text": "Clothes",
-    "time": "Aug 17, 2024 12:25 pm",
+    "text": "Cool",
+    "time": "Aug 17, 2024 12:24 pm",
     "kind": "msg",
     "reactions": [
       {
         "reactor": "Bushra Khan",
-        "emoji": "❤"
+        "emoji": "❤️"
+      }
+    ]
+  },
+  {
+    "sender": "Bushra Khan",
+    "text": "Yepp",
+    "time": "Aug 17, 2024 12:24 pm",
+    "kind": "msg",
+    "reactions": [
+      {
+        "reactor": "Bushra Khan",
+        "emoji": "❤️"
       }
     ]
   },
@@ -109,21 +97,21 @@
   },
   {
     "sender": "Aamir | عامر",
-    "text": "Do you like this hot brownie with ice cream",
-    "time": "Aug 17, 2024 12:26 pm",
-    "kind": "msg"
-  },
-  {
-    "sender": "Bushra Khan",
-    "text": "That’s cool",
-    "time": "Aug 17, 2024 12:26 pm",
+    "text": "Clothes",
+    "time": "Aug 17, 2024 12:25 pm",
     "kind": "msg",
     "reactions": [
       {
-        "reactor": "Aamir | عامر",
-        "emoji": "❤"
+        "reactor": "Bushra Khan",
+        "emoji": "❤️"
       }
     ]
+  },
+  {
+    "sender": "Aamir | عامر",
+    "text": "I had too much",
+    "time": "Aug 17, 2024 12:25 pm",
+    "kind": "msg"
   },
   {
     "sender": "Bushra Khan",
@@ -133,7 +121,31 @@
     "reactions": [
       {
         "reactor": "Aamir | عامر",
-        "emoji": "❤"
+        "emoji": "❤️"
+      }
+    ]
+  },
+  {
+    "sender": "Bushra Khan",
+    "text": "That’s cool",
+    "time": "Aug 17, 2024 12:26 pm",
+    "kind": "msg",
+    "reactions": [
+      {
+        "reactor": "Aamir | عامر",
+        "emoji": "❤️"
+      }
+    ]
+  },
+  {
+    "sender": "Aamir | عامر",
+    "text": "Do you like this hot brownie with ice cream",
+    "time": "Aug 17, 2024 12:26 pm",
+    "kind": "msg",
+    "reactions": [
+      {
+        "reactor": "Aamir | عامر",
+        "emoji": "❤️"
       }
     ]
   },
@@ -151,21 +163,15 @@
   },
   {
     "sender": "Aamir | عامر",
-    "text": "So was good",
+    "text": "Yeah kind of",
     "time": "Aug 17, 2024 12:32 pm",
     "kind": "msg",
     "reactions": [
       {
         "reactor": "Bushra Khan",
-        "emoji": "❤"
+        "emoji": "❤️"
       }
     ]
-  },
-  {
-    "sender": "Aamir | عامر",
-    "text": "Like really hot at the bottom and cold ice cream at top",
-    "time": "Aug 17, 2024 12:32 pm",
-    "kind": "msg"
   },
   {
     "sender": "Aamir | عامر",
@@ -175,19 +181,61 @@
   },
   {
     "sender": "Aamir | عامر",
-    "text": "Yeah kind of",
+    "text": "Like really hot at the bottom and cold ice cream at top",
     "time": "Aug 17, 2024 12:32 pm",
     "kind": "msg"
   },
   {
     "sender": "Aamir | عامر",
-    "text": "Right",
+    "text": "So was good",
+    "time": "Aug 17, 2024 12:32 pm",
+    "kind": "msg",
+    "reactions": [
+      {
+        "reactor": "Bushra Khan",
+        "emoji": "❤️"
+      }
+    ]
+  },
+  {
+    "sender": "Bushra Khan",
+    "text": "Rightt",
     "time": "Aug 17, 2024 12:33 pm",
     "kind": "msg",
     "reactions": [
       {
         "reactor": "Bushra Khan",
-        "emoji": "❤"
+        "emoji": "❤️"
+      }
+    ]
+  },
+  {
+    "sender": "Aamir | عامر",
+    "text": "Yup",
+    "time": "Aug 17, 2024 12:33 pm",
+    "kind": "msg"
+  },
+  {
+    "sender": "Bushra Khan",
+    "text": "I have had the hot brownie",
+    "time": "Aug 17, 2024 12:33 pm",
+    "kind": "msg",
+    "reactions": [
+      {
+        "reactor": "Bushra Khan",
+        "emoji": "❤️"
+      }
+    ]
+  },
+  {
+    "sender": "Aamir | عامر",
+    "text": "Will have",
+    "time": "Aug 17, 2024 12:33 pm",
+    "kind": "msg",
+    "reactions": [
+      {
+        "reactor": "Bushra Khan",
+        "emoji": "❤️"
       }
     ]
   },
@@ -199,43 +247,37 @@
   },
   {
     "sender": "Aamir | عامر",
-    "text": "Will have",
+    "text": "Right",
     "time": "Aug 17, 2024 12:33 pm",
     "kind": "msg",
     "reactions": [
       {
         "reactor": "Bushra Khan",
-        "emoji": "❤"
+        "emoji": "❤️"
       }
     ]
   },
   {
-    "sender": "Bushra Khan",
-    "text": "I have had the hot brownie",
-    "time": "Aug 17, 2024 12:33 pm",
-    "kind": "msg"
-  },
-  {
     "sender": "Aamir | عامر",
-    "text": "Yup",
-    "time": "Aug 17, 2024 12:33 pm",
-    "kind": "msg"
-  },
-  {
-    "sender": "Bushra Khan",
-    "text": "Rightt",
-    "time": "Aug 17, 2024 12:33 pm",
-    "kind": "msg"
-  },
-  {
-    "sender": "Aamir | عامر",
-    "text": "😁",
+    "text": "But since it’s too much sugar",
     "time": "Aug 17, 2024 12:34 pm",
     "kind": "msg",
     "reactions": [
       {
         "reactor": "Bushra Khan",
-        "emoji": "❤"
+        "emoji": "❤️"
+      }
+    ]
+  },
+  {
+    "sender": "Aamir | عامر",
+    "text": "Will have little 😶",
+    "time": "Aug 17, 2024 12:34 pm",
+    "kind": "msg",
+    "reactions": [
+      {
+        "reactor": "Aamir | عامر",
+        "emoji": "❤️"
       }
     ]
   },
@@ -247,20 +289,26 @@
     "reactions": [
       {
         "reactor": "Aamir | عامر",
-        "emoji": "❤"
+        "emoji": "❤️"
       }
     ]
   },
   {
     "sender": "Aamir | عامر",
-    "text": "Will have little 😶",
+    "text": "😁",
     "time": "Aug 17, 2024 12:34 pm",
-    "kind": "msg"
+    "kind": "msg",
+    "reactions": [
+      {
+        "reactor": "Bushra Khan",
+        "emoji": "❤️"
+      }
+    ]
   },
   {
-    "sender": "Aamir | عامر",
-    "text": "But since it’s too much sugar",
-    "time": "Aug 17, 2024 12:34 pm",
+    "sender": "Bushra Khan",
+    "text": "There’s nobody there today",
+    "time": "Aug 17, 2024 12:36 pm",
     "kind": "msg"
   },
   {
@@ -271,25 +319,19 @@
   },
   {
     "sender": "Bushra Khan",
-    "text": "There’s nobody there today",
-    "time": "Aug 17, 2024 12:36 pm",
-    "kind": "msg"
+    "text": "Cuteee",
+    "time": "Aug 17, 2024 12:37 pm",
+    "kind": "msg",
+    "reactions": [
+      {
+        "reactor": "Aamir | عامر",
+        "emoji": "❤️"
+      }
+    ]
   },
   {
     "sender": "Bushra Khan",
-    "text": "Feel lazyyy",
-    "time": "Aug 17, 2024 12:37 pm",
-    "kind": "msg"
-  },
-  {
-    "sender": "Aamir | عامر",
-    "text": "Is it good or bad then",
-    "time": "Aug 17, 2024 12:37 pm",
-    "kind": "msg"
-  },
-  {
-    "sender": "Aamir | عامر",
-    "text": "Okkay",
+    "text": "Very less people I mean",
     "time": "Aug 17, 2024 12:37 pm",
     "kind": "msg"
   },
@@ -300,26 +342,32 @@
     "kind": "msg"
   },
   {
-    "sender": "Bushra Khan",
-    "text": "Very less people I mean",
+    "sender": "Aamir | عامر",
+    "text": "Okkay",
+    "time": "Aug 17, 2024 12:37 pm",
+    "kind": "msg"
+  },
+  {
+    "sender": "Aamir | عامر",
+    "text": "Is it good or bad then",
     "time": "Aug 17, 2024 12:37 pm",
     "kind": "msg"
   },
   {
     "sender": "Bushra Khan",
-    "text": "Cuteee",
+    "text": "Feel lazyyy",
     "time": "Aug 17, 2024 12:37 pm",
     "kind": "msg",
     "reactions": [
       {
         "reactor": "Aamir | عامر",
-        "emoji": "❤"
+        "emoji": "❤️"
       }
     ]
   },
   {
-    "sender": "Aamir | عامر",
-    "text": "Which chips ma’am",
+    "sender": "Bushra Khan",
+    "text": "Wanna have chips",
     "time": "Aug 17, 2024 12:38 pm",
     "kind": "msg"
   },
@@ -331,20 +379,14 @@
     "reactions": [
       {
         "reactor": "Bushra Khan",
-        "emoji": "❤"
+        "emoji": "❤️"
       }
     ]
   },
   {
-    "sender": "Bushra Khan",
-    "text": "Wanna have chips",
+    "sender": "Aamir | عامر",
+    "text": "Which chips ma’am",
     "time": "Aug 17, 2024 12:38 pm",
-    "kind": "msg"
-  },
-  {
-    "sender": "Bushra Khan",
-    "text": "Aise hi",
-    "time": "Aug 17, 2024 12:39 pm",
     "kind": "msg"
   },
   {
@@ -354,26 +396,32 @@
     "kind": "msg"
   },
   {
+    "sender": "Bushra Khan",
+    "text": "Aise hi",
+    "time": "Aug 17, 2024 12:39 pm",
+    "kind": "msg"
+  },
+  {
     "sender": "Aamir | عامر",
-    "text": "Yupp 😌",
+    "text": "Achcha",
     "time": "Aug 17, 2024 12:40 pm",
     "kind": "msg",
     "reactions": [
       {
         "reactor": "Bushra Khan",
-        "emoji": "❤"
+        "emoji": "❤️"
       }
     ]
   },
   {
     "sender": "Bushra Khan",
-    "text": "😁",
+    "text": "Sometimes I feel I say just anything to you",
     "time": "Aug 17, 2024 12:40 pm",
     "kind": "msg",
     "reactions": [
       {
         "reactor": "Aamir | عامر",
-        "emoji": "❤"
+        "emoji": "❤️"
       }
     ]
   },
@@ -385,25 +433,37 @@
     "reactions": [
       {
         "reactor": "Bushra Khan",
-        "emoji": "❤"
+        "emoji": "❤️"
       }
     ]
   },
   {
     "sender": "Bushra Khan",
-    "text": "Sometimes I feel I say just anything to you",
+    "text": "😁",
     "time": "Aug 17, 2024 12:40 pm",
-    "kind": "msg"
+    "kind": "msg",
+    "reactions": [
+      {
+        "reactor": "Aamir | عامر",
+        "emoji": "❤️"
+      }
+    ]
   },
   {
     "sender": "Aamir | عامر",
-    "text": "Achcha",
+    "text": "Yupp 😌",
     "time": "Aug 17, 2024 12:40 pm",
-    "kind": "msg"
+    "kind": "msg",
+    "reactions": [
+      {
+        "reactor": "Bushra Khan",
+        "emoji": "❤️"
+      }
+    ]
   },
   {
-    "sender": "Bushra Khan",
-    "text": "Pagal hai yeh log",
+    "sender": "Aamir | عامر",
+    "text": "You know",
     "time": "Aug 17, 2024 12:42 pm",
     "kind": "msg"
   },
@@ -420,32 +480,14 @@
     ]
   },
   {
-    "sender": "Aamir | عامر",
-    "text": "You know",
+    "sender": "Bushra Khan",
+    "text": "Pagal hai yeh log",
     "time": "Aug 17, 2024 12:42 pm",
     "kind": "msg"
   },
   {
     "sender": "Bushra Khan",
-    "text": "I was stuck once",
-    "time": "Aug 17, 2024 12:43 pm",
-    "kind": "msg"
-  },
-  {
-    "sender": "Aamir | عامر",
-    "text": "Right",
-    "time": "Aug 17, 2024 12:43 pm",
-    "kind": "msg"
-  },
-  {
-    "sender": "Aamir | عامر",
-    "text": "Either they shouldn’t allow any time or they should let it be",
-    "time": "Aug 17, 2024 12:43 pm",
-    "kind": "msg"
-  },
-  {
-    "sender": "Bushra Khan",
-    "text": "The traffic they cause is another",
+    "text": "Politician hai ki some deity",
     "time": "Aug 17, 2024 12:43 pm",
     "kind": "msg"
   },
@@ -457,19 +499,37 @@
   },
   {
     "sender": "Bushra Khan",
-    "text": "Politician hai ki some deity",
+    "text": "The traffic they cause is another",
     "time": "Aug 17, 2024 12:43 pm",
     "kind": "msg"
   },
   {
     "sender": "Aamir | عامر",
-    "text": "Right I remember",
-    "time": "Aug 17, 2024 12:44 pm",
+    "text": "Either they shouldn’t allow any time or they should let it be",
+    "time": "Aug 17, 2024 12:43 pm",
+    "kind": "msg"
+  },
+  {
+    "sender": "Aamir | عامر",
+    "text": "Right",
+    "time": "Aug 17, 2024 12:43 pm",
+    "kind": "msg"
+  },
+  {
+    "sender": "Bushra Khan",
+    "text": "I was stuck once",
+    "time": "Aug 17, 2024 12:43 pm",
     "kind": "msg"
   },
   {
     "sender": "Bushra Khan",
     "text": "And i was like Inko aane hi open bolta hai",
+    "time": "Aug 17, 2024 12:44 pm",
+    "kind": "msg"
+  },
+  {
+    "sender": "Aamir | عامر",
+    "text": "Right I remember",
     "time": "Aug 17, 2024 12:44 pm",
     "kind": "msg"
   },
@@ -487,13 +547,13 @@
   },
   {
     "sender": "Aamir | عامر",
-    "text": "Yes’s",
+    "text": "Not against road side shops but they should leave some space to walk",
     "time": "Aug 17, 2024 12:47 pm",
     "kind": "msg",
     "reactions": [
       {
         "reactor": "Bushra Khan",
-        "emoji": "❤"
+        "emoji": "❤️"
       }
     ]
   },
@@ -505,8 +565,20 @@
   },
   {
     "sender": "Aamir | عامر",
-    "text": "Not against road side shops but they should leave some space to walk",
+    "text": "Yes’s",
     "time": "Aug 17, 2024 12:47 pm",
+    "kind": "msg",
+    "reactions": [
+      {
+        "reactor": "Bushra Khan",
+        "emoji": "❤️"
+      }
+    ]
+  },
+  {
+    "sender": "Bushra Khan",
+    "text": "The place I live has the road all blocked",
+    "time": "Aug 17, 2024 12:48 pm",
     "kind": "msg"
   },
   {
@@ -517,8 +589,8 @@
   },
   {
     "sender": "Bushra Khan",
-    "text": "The place I live has the road all blocked",
-    "time": "Aug 17, 2024 12:48 pm",
+    "text": "But it’s too common",
+    "time": "Aug 17, 2024 12:49 pm",
     "kind": "msg"
   },
   {
@@ -528,20 +600,14 @@
     "kind": "msg"
   },
   {
-    "sender": "Bushra Khan",
-    "text": "But it’s too common",
-    "time": "Aug 17, 2024 12:49 pm",
-    "kind": "msg"
-  },
-  {
     "sender": "Aamir | عامر",
-    "text": "Right 😂",
+    "text": "I mean it leads to unnecessary blockageIf that was in proper order it could have been better",
     "time": "Aug 17, 2024 12:50 pm",
     "kind": "msg",
     "reactions": [
       {
         "reactor": "Bushra Khan",
-        "emoji": "❤"
+        "emoji": "❤️"
       }
     ]
   },
@@ -553,43 +619,31 @@
   },
   {
     "sender": "Aamir | عامر",
-    "text": "I mean it leads to unnecessary blockageIf that was in proper order it could have been better",
+    "text": "Right 😂",
     "time": "Aug 17, 2024 12:50 pm",
-    "kind": "msg"
+    "kind": "msg",
+    "reactions": [
+      {
+        "reactor": "Bushra Khan",
+        "emoji": "❤️"
+      }
+    ]
   },
   {
     "sender": "Bushra Khan",
-    "text": "Like I was really shocked to see it here",
+    "text": "It has to be illogical",
     "time": "Aug 17, 2024 12:51 pm",
     "kind": "msg"
   },
   {
-    "sender": "Bushra Khan",
-    "text": "They didn’t have markets like here",
+    "sender": "Aamir | عامر",
+    "text": "Yesss",
     "time": "Aug 17, 2024 12:51 pm",
     "kind": "msg",
     "reactions": [
       {
         "reactor": "Aamir | عامر",
-        "emoji": "❤"
-      }
-    ]
-  },
-  {
-    "sender": "Aamir | عامر",
-    "text": "What ma’am",
-    "time": "Aug 17, 2024 12:51 pm",
-    "kind": "msg"
-  },
-  {
-    "sender": "Aamir | عامر",
-    "text": "Mumbai is anyways way too cramped up",
-    "time": "Aug 17, 2024 12:51 pm",
-    "kind": "msg",
-    "reactions": [
-      {
-        "reactor": "Bushra Khan",
-        "emoji": "❤"
+        "emoji": "❤️"
       }
     ]
   },
@@ -601,13 +655,37 @@
   },
   {
     "sender": "Aamir | عامر",
-    "text": "Yesss",
+    "text": "Mumbai is anyways way too cramped up",
+    "time": "Aug 17, 2024 12:51 pm",
+    "kind": "msg",
+    "reactions": [
+      {
+        "reactor": "Bushra Khan",
+        "emoji": "❤️"
+      }
+    ]
+  },
+  {
+    "sender": "Aamir | عامر",
+    "text": "What ma’am",
     "time": "Aug 17, 2024 12:51 pm",
     "kind": "msg"
   },
   {
     "sender": "Bushra Khan",
-    "text": "It has to be illogical",
+    "text": "They didn’t have markets like here",
+    "time": "Aug 17, 2024 12:51 pm",
+    "kind": "msg",
+    "reactions": [
+      {
+        "reactor": "Aamir | عامر",
+        "emoji": "❤️"
+      }
+    ]
+  },
+  {
+    "sender": "Bushra Khan",
+    "text": "Like I was really shocked to see it here",
     "time": "Aug 17, 2024 12:51 pm",
     "kind": "msg"
   },
@@ -618,10 +696,16 @@
     "kind": "msg"
   },
   {
-    "sender": "Aamir | عامر",
-    "text": "I know right",
+    "sender": "Bushra Khan",
+    "text": "So it made sense that people here just never accepts changes can exist",
     "time": "Aug 17, 2024 12:53 pm",
-    "kind": "msg"
+    "kind": "msg",
+    "reactions": [
+      {
+        "reactor": "Aamir | عامر",
+        "emoji": "❤️"
+      }
+    ]
   },
   {
     "sender": "Bushra Khan",
@@ -630,32 +714,20 @@
     "kind": "msg"
   },
   {
-    "sender": "Bushra Khan",
-    "text": "So it made sense that people here just never accepts changes can exist",
+    "sender": "Aamir | عامر",
+    "text": "I know right",
     "time": "Aug 17, 2024 12:53 pm",
     "kind": "msg",
     "reactions": [
       {
         "reactor": "Aamir | عامر",
-        "emoji": "❤"
+        "emoji": "❤️"
       }
     ]
   },
   {
-    "sender": "Aamir | عامر",
-    "text": "Right",
-    "time": "Aug 17, 2024 12:54 pm",
-    "kind": "msg"
-  },
-  {
     "sender": "Bushra Khan",
-    "text": "Depends who is okay with what",
-    "time": "Aug 17, 2024 12:54 pm",
-    "kind": "msg"
-  },
-  {
-    "sender": "Bushra Khan",
-    "text": "Rightt",
+    "text": "Yep",
     "time": "Aug 17, 2024 12:54 pm",
     "kind": "msg"
   },
@@ -667,31 +739,31 @@
   },
   {
     "sender": "Bushra Khan",
-    "text": "Yep",
+    "text": "Rightt",
     "time": "Aug 17, 2024 12:54 pm",
     "kind": "msg"
   },
   {
     "sender": "Bushra Khan",
-    "text": "But leaving India would be really dreamy",
-    "time": "Aug 17, 2024 12:55 pm",
-    "kind": "msg"
-  },
-  {
-    "sender": "Bushra Khan",
-    "text": "You know we talked about it",
-    "time": "Aug 17, 2024 12:55 pm",
+    "text": "Depends who is okay with what",
+    "time": "Aug 17, 2024 12:54 pm",
     "kind": "msg"
   },
   {
     "sender": "Aamir | عامر",
-    "text": "It was way too peaceful",
+    "text": "Right",
+    "time": "Aug 17, 2024 12:54 pm",
+    "kind": "msg"
+  },
+  {
+    "sender": "Aamir | عامر",
+    "text": "You know when I was in Bhutan I was like can I settle here 😂",
     "time": "Aug 17, 2024 12:55 pm",
     "kind": "msg",
     "reactions": [
       {
         "reactor": "Bushra Khan",
-        "emoji": "❤"
+        "emoji": "❤️"
       }
     ]
   },
@@ -703,19 +775,43 @@
     "reactions": [
       {
         "reactor": "Aamir | عامر",
-        "emoji": "❤"
+        "emoji": "❤️"
       }
     ]
   },
   {
     "sender": "Aamir | عامر",
-    "text": "You know when I was in Bhutan I was like can I settle here 😂",
+    "text": "It was way too peaceful",
     "time": "Aug 17, 2024 12:55 pm",
     "kind": "msg",
     "reactions": [
       {
         "reactor": "Bushra Khan",
-        "emoji": "❤"
+        "emoji": "❤️"
+      }
+    ]
+  },
+  {
+    "sender": "Bushra Khan",
+    "text": "You know we talked about it",
+    "time": "Aug 17, 2024 12:55 pm",
+    "kind": "msg",
+    "reactions": [
+      {
+        "reactor": "Aamir | عامر",
+        "emoji": "❤️"
+      }
+    ]
+  },
+  {
+    "sender": "Bushra Khan",
+    "text": "But leaving India would be really dreamy",
+    "time": "Aug 17, 2024 12:55 pm",
+    "kind": "msg",
+    "reactions": [
+      {
+        "reactor": "Bushra Khan",
+        "emoji": "❤️"
       }
     ]
   },
@@ -733,7 +829,13 @@
   },
   {
     "sender": "Bushra Khan",
-    "text": "Why sir",
+    "text": "Nope",
+    "time": "Aug 17, 2024 12:58 pm",
+    "kind": "msg"
+  },
+  {
+    "sender": "Bushra Khan",
+    "text": "I guess",
     "time": "Aug 17, 2024 12:58 pm",
     "kind": "msg"
   },
@@ -745,13 +847,7 @@
   },
   {
     "sender": "Bushra Khan",
-    "text": "I guess",
-    "time": "Aug 17, 2024 12:58 pm",
-    "kind": "msg"
-  },
-  {
-    "sender": "Bushra Khan",
-    "text": "Nope",
+    "text": "Why sir",
     "time": "Aug 17, 2024 12:58 pm",
     "kind": "msg"
   },
@@ -781,13 +877,13 @@
   },
   {
     "sender": "Aamir | عامر",
-    "text": "Hurts",
+    "text": "My leg 🦵",
     "time": "Aug 17, 2024 1:03 pm",
     "kind": "msg"
   },
   {
     "sender": "Aamir | عامر",
-    "text": "My leg 🦵",
+    "text": "Hurts",
     "time": "Aug 17, 2024 1:03 pm",
     "kind": "msg"
   },
@@ -810,38 +906,36 @@
     ]
   },
   {
-    "sender": "Bushra Khan",
-    "text": "😁Yepp",
+    "sender": "Aamir | عامر",
+    "text": "You will leave at 5:30 ma’am",
     "time": "Aug 17, 2024 1:08 pm",
     "kind": "msg",
     "reactions": [
       {
         "reactor": "Aamir | عامر",
-        "emoji": "❤"
+        "emoji": "❤️"
       }
     ]
   },
   {
-    "sender": "Aamir | عامر",
-    "text": "IWill miss you",
+    "sender": "Bushra Khan",
+    "text": "Yeppp",
     "time": "Aug 17, 2024 1:08 pm",
     "kind": "msg",
     "reactions": [
       {
         "reactor": "Bushra Khan",
-        "emoji": "❤"
+        "emoji": "❤️"
+      },
+      {
+        "reactor": "Aamir | عامر",
+        "emoji": "❤️"
       }
     ]
   },
   {
-    "sender": "Aamir | عامر",
-    "text": "Please take care okay",
-    "time": "Aug 17, 2024 1:08 pm",
-    "kind": "msg"
-  },
-  {
-    "sender": "Aamir | عامر",
-    "text": "Okay Hana 🥲",
+    "sender": "Bushra Khan",
+    "text": "Would have to go in",
     "time": "Aug 17, 2024 1:08 pm",
     "kind": "msg"
   },
@@ -852,38 +946,78 @@
     "kind": "msg"
   },
   {
-    "sender": "Bushra Khan",
-    "text": "Would have to go in",
+    "sender": "Aamir | عامر",
+    "text": "Okay Hana 🥲",
     "time": "Aug 17, 2024 1:08 pm",
     "kind": "msg"
   },
   {
-    "sender": "Bushra Khan",
-    "text": "Yeppp",
+    "sender": "Aamir | عامر",
+    "text": "Please take care okay",
+    "time": "Aug 17, 2024 1:08 pm",
+    "kind": "msg"
+  },
+  {
+    "sender": "Aamir | عامر",
+    "text": "IWill miss you",
     "time": "Aug 17, 2024 1:08 pm",
     "kind": "msg",
     "reactions": [
       {
         "reactor": "Aamir | عامر",
-        "emoji": "❤"
+        "emoji": "❤️"
+      },
+      {
+        "reactor": "Bushra Khan",
+        "emoji": "❤️"
       }
     ]
   },
   {
-    "sender": "Aamir | عامر",
-    "text": "You will leave at 5:30 ma’am",
+    "sender": "Bushra Khan",
+    "text": "😁Yepp",
     "time": "Aug 17, 2024 1:08 pm",
-    "kind": "msg"
+    "kind": "msg",
+    "reactions": [
+      {
+        "reactor": "Aamir | عامر",
+        "emoji": "❤️"
+      }
+    ]
   },
   {
     "sender": "Bushra Khan",
-    "text": "👋💕💕💕💕💕",
+    "text": "I will miss you more",
     "time": "Aug 17, 2024 1:09 pm",
     "kind": "msg",
     "reactions": [
       {
         "reactor": "Aamir | عامر",
-        "emoji": "❤"
+        "emoji": "❤️"
+      }
+    ]
+  },
+  {
+    "sender": "Bushra Khan",
+    "text": "Allah hafiz",
+    "time": "Aug 17, 2024 1:09 pm",
+    "kind": "msg",
+    "reactions": [
+      {
+        "reactor": "Bushra Khan",
+        "emoji": "❤️"
+      }
+    ]
+  },
+  {
+    "sender": "Aamir | عامر",
+    "text": "Allah hafiz",
+    "time": "Aug 17, 2024 1:09 pm",
+    "kind": "msg",
+    "reactions": [
+      {
+        "reactor": "Bushra Khan",
+        "emoji": "❤️"
       }
     ]
   },
@@ -895,45 +1029,21 @@
     "reactions": [
       {
         "reactor": "Bushra Khan",
-        "emoji": "❤"
-      }
-    ]
-  },
-  {
-    "sender": "Aamir | عامر",
-    "text": "Allah hafiz",
-    "time": "Aug 17, 2024 1:09 pm",
-    "kind": "msg",
-    "reactions": [
-      {
-        "reactor": "Bushra Khan",
-        "emoji": "❤"
+        "emoji": "❤️"
       }
     ]
   },
   {
     "sender": "Bushra Khan",
-    "text": "Allah hafiz",
-    "time": "Aug 17, 2024 1:09 pm",
-    "kind": "msg"
-  },
-  {
-    "sender": "Bushra Khan",
-    "text": "I will miss you more",
+    "text": "👋💕💕💕💕💕",
     "time": "Aug 17, 2024 1:09 pm",
     "kind": "msg",
     "reactions": [
       {
         "reactor": "Aamir | عامر",
-        "emoji": "❤"
+        "emoji": "❤️"
       }
     ]
-  },
-  {
-    "sender": "Bushra Khan",
-    "text": "Sorry",
-    "time": "Aug 17, 2024 7:07 pm",
-    "kind": "msg"
   },
   {
     "sender": "Bushra Khan",
@@ -943,15 +1053,9 @@
   },
   {
     "sender": "Bushra Khan",
-    "text": "Will sleep again okay",
-    "time": "Aug 17, 2024 7:08 pm",
-    "kind": "msg",
-    "reactions": [
-      {
-        "reactor": "Aamir | عامر",
-        "emoji": "❤"
-      }
-    ]
+    "text": "Sorry",
+    "time": "Aug 17, 2024 7:07 pm",
+    "kind": "msg"
   },
   {
     "sender": "Bushra Khan",
@@ -961,7 +1065,19 @@
     "reactions": [
       {
         "reactor": "Aamir | عامر",
-        "emoji": "❤"
+        "emoji": "❤️"
+      }
+    ]
+  },
+  {
+    "sender": "Bushra Khan",
+    "text": "Will sleep again okay",
+    "time": "Aug 17, 2024 7:08 pm",
+    "kind": "msg",
+    "reactions": [
+      {
+        "reactor": "Aamir | عامر",
+        "emoji": "❤️"
       }
     ]
   },
@@ -973,7 +1089,7 @@
     "reactions": [
       {
         "reactor": "Bushra Khan",
-        "emoji": "❤"
+        "emoji": "❤️"
       }
     ]
   },
@@ -984,14 +1100,8 @@
     "kind": "msg"
   },
   {
-    "sender": "Aamir | عامر",
-    "text": "She went by herself",
-    "time": "Aug 18, 2024 12:35 am",
-    "kind": "msg"
-  },
-  {
     "sender": "Bushra Khan",
-    "text": "And now I have to be alone",
+    "text": "Cuteeeee",
     "time": "Aug 18, 2024 12:35 am",
     "kind": "msg"
   },
@@ -1003,7 +1113,13 @@
   },
   {
     "sender": "Bushra Khan",
-    "text": "Cuteeeee",
+    "text": "And now I have to be alone",
+    "time": "Aug 18, 2024 12:35 am",
+    "kind": "msg"
+  },
+  {
+    "sender": "Aamir | عامر",
+    "text": "She went by herself",
     "time": "Aug 18, 2024 12:35 am",
     "kind": "msg"
   },
@@ -1020,8 +1136,8 @@
     "kind": "msg"
   },
   {
-    "sender": "Bushra Khan",
-    "text": "Okay",
+    "sender": "Aamir | عامر",
+    "text": "Came to Andheri West",
     "time": "Aug 18, 2024 12:42 am",
     "kind": "msg"
   },
@@ -1032,8 +1148,8 @@
     "kind": "msg"
   },
   {
-    "sender": "Aamir | عامر",
-    "text": "Came to Andheri West",
+    "sender": "Bushra Khan",
+    "text": "Okay",
     "time": "Aug 18, 2024 12:42 am",
     "kind": "msg"
   },
@@ -1045,13 +1161,13 @@
   },
   {
     "sender": "Bushra Khan",
-    "text": "Did you have sir",
+    "text": "I’ll have in some time",
     "time": "Aug 18, 2024 12:51 am",
     "kind": "msg"
   },
   {
     "sender": "Bushra Khan",
-    "text": "I’ll have in some time",
+    "text": "Did you have sir",
     "time": "Aug 18, 2024 12:51 am",
     "kind": "msg"
   },
@@ -1081,20 +1197,14 @@
   },
   {
     "sender": "Aamir | عامر",
-    "text": "I got runny nose again",
-    "time": "Aug 18, 2024 1:17 am",
-    "kind": "msg"
-  },
-  {
-    "sender": "Aamir | عامر",
     "text": "Yup a bit",
     "time": "Aug 18, 2024 1:17 am",
     "kind": "msg"
   },
   {
-    "sender": "Bushra Khan",
-    "text": "🥹",
-    "time": "Aug 18, 2024 1:18 am",
+    "sender": "Aamir | عامر",
+    "text": "I got runny nose again",
+    "time": "Aug 18, 2024 1:17 am",
     "kind": "msg"
   },
   {
@@ -1110,10 +1220,16 @@
     ]
   },
   {
-    "sender": "Aamir | عامر",
-    "text": "Drank cold drink again now 😶 (edited)",
-    "time": "Aug 18, 2024 1:19 am",
-    "kind": "msg"
+    "sender": "Bushra Khan",
+    "text": "🥹",
+    "time": "Aug 18, 2024 1:18 am",
+    "kind": "msg",
+    "reactions": [
+      {
+        "reactor": "Bushra Khan",
+        "emoji": "😢"
+      }
+    ]
   },
   {
     "sender": "Aamir | عامر",
@@ -1123,13 +1239,19 @@
   },
   {
     "sender": "Aamir | عامر",
-    "text": "Won’t now",
+    "text": "Drank cold drink again now 😶 (edited)",
+    "time": "Aug 18, 2024 1:19 am",
+    "kind": "msg"
+  },
+  {
+    "sender": "Bushra Khan",
+    "text": "😒",
     "time": "Aug 18, 2024 1:20 am",
     "kind": "msg",
     "reactions": [
       {
         "reactor": "Bushra Khan",
-        "emoji": "❤"
+        "emoji": "❤️"
       }
     ]
   }
