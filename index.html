@@ -336,7 +336,7 @@ body::after {
   background: rgba(60,0,50,0.6); padding: 2px 12px; border-radius: 10px;
   backdrop-filter: blur(6px); letter-spacing: 0.3px;
 }
-.msg-row { display: flex; align-items: flex-end; gap: 6px; padding: 1px 0; position: relative; z-index: 1; }
+.msg-row { display: flex; align-items: flex-end; gap: 6px; padding: 1px 0; position: relative; z-index: 3; }
 .msg-row.sent { flex-direction: row-reverse; }
 .msg-avatar {
   width: 24px; height: 24px; border-radius: 50%;
@@ -745,9 +745,9 @@ body::after {
       <svg width="22" height="22" viewBox="0 0 24 24" fill="none"><circle cx="12" cy="12" r="10" stroke="#ff80c0" stroke-width="1.8"/><line x1="12" y1="8" x2="12" y2="12" stroke="#ff80c0" stroke-width="1.8" stroke-linecap="round"/><line x1="12" y1="16" x2="12.01" y2="16" stroke="#ff80c0" stroke-width="2" stroke-linecap="round"/></svg>
     </div>
   </div>
-    <div id="chatHeartsLayer" style="position:absolute;top:0;left:0;right:0;bottom:0;pointer-events:none;overflow:hidden;z-index:2">
+    <div id="chatHeartsLayer" style="position:absolute;top:0;left:0;right:0;bottom:0;pointer-events:none;overflow:hidden;z-index:0">
     <!-- Big blurry background hearts (like Instagram love theme) -->
-    <svg width="100%" height="100%" style="position:absolute;inset:0;opacity:0.18" viewBox="0 0 390 700" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="xMidYMid slice">
+    <svg width="100%" height="100%" style="position:absolute;inset:0;opacity:0.10" viewBox="0 0 390 700" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="xMidYMid slice">
       <defs><filter id="hblur"><feGaussianBlur stdDeviation="18"/></filter></defs>
       <!-- Large blurry hearts scattered -->
       <text x="20"  y="220" font-size="180" fill="#cc0088" filter="url(#hblur)" opacity="0.7">♥</text>
