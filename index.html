@@ -736,7 +736,7 @@ const NUM_PAGES=615;
 const SENT_USER='Aamir | \u0639\u0627\u0645\u0631';
 let currentPage=1;
 const sel=document.getElementById('pageSelect');
-  (window.requestIdleCallback||setTimeout)(()=>{
+  (window.requestIdleCallback||setTimeout)(function(){
     const frag=document.createDocumentFragment();
     for(let i=1;i<=NUM_PAGES;i++){
       const o=document.createElement('option');
@@ -745,7 +745,7 @@ const sel=document.getElementById('pageSelect');
     }
     sel.appendChild(frag);
     sel.value=currentPage;
-  },1);
+  },{timeout:1});
 
 (function(){
   const bg=document.getElementById('heartsBg');
