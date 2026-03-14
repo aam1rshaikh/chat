@@ -545,19 +545,34 @@ body::after {
       <path d="M5 4 Q6 2 7 4" fill="none" stroke="#c85a00" stroke-width="0.6" opacity="0.6"/>
       <path d="M11 4 Q12 2 13 4" fill="none" stroke="#c85a00" stroke-width="0.6" opacity="0.6"/>
     </g>
-    <g transform="translate(326,26)" opacity="0.92">
-      <line x1="-4" y1="3" x2="-13" y2="3" stroke="#e87060" stroke-width="1" opacity="0.55"/>
-      <line x1="-4" y1="7" x2="-16" y2="7" stroke="#e87060" stroke-width="1.3" opacity="0.65"/>
-      <line x1="-4" y1="11" x2="-11" y2="11" stroke="#e87060" stroke-width="0.8" opacity="0.4"/>
-      <rect x="0" y="0" width="36" height="14" rx="7" fill="#c85070"/>
-      <circle cx="7" cy="16" r="4" fill="#1a0614"/>
-      <circle cx="29" cy="16" r="4" fill="#1a0614"/>
-      <circle cx="7" cy="16" r="1.8" fill="#6a3040"/>
-      <circle cx="29" cy="16" r="1.8" fill="#6a3040"/>
-      <circle cx="5" cy="5" r="2.5" fill="#ffe066" opacity="0.95"/>
-      <circle cx="31" cy="5" r="2.5" fill="#ffe066" opacity="0.95"/>
-      <circle cx="5" cy="5" r="1.2" fill="#111"/>
-      <circle cx="31" cy="5" r="1.2" fill="#111"/>
+    <g transform="translate(334,24)">
+      <!-- body -->
+      <ellipse cx="9" cy="18" rx="8" ry="9" fill="#f0f0f0"/>
+      <!-- tummy -->
+      <ellipse cx="9" cy="20" rx="4" ry="5" fill="#ffffff" opacity="0.8"/>
+      <!-- head -->
+      <ellipse cx="9" cy="8" rx="7.5" ry="7" fill="#f0f0f0"/>
+      <!-- ears -->
+      <polygon points="3,3 1,-2 6,1" fill="#f0f0f0"/>
+      <polygon points="15,3 17,-2 12,1" fill="#f0f0f0"/>
+      <polygon points="3.5,2.5 2.2,-0.8 5.5,1.2" fill="#ffb0c0" opacity="0.9"/>
+      <polygon points="14.5,2.5 15.8,-0.8 12.5,1.2" fill="#ffb0c0" opacity="0.9"/>
+      <!-- eyes -->
+      <ellipse cx="6.5" cy="7" rx="2.2" ry="2.4" fill="#3a2a50"/>
+      <ellipse cx="11.5" cy="7" rx="2.2" ry="2.4" fill="#3a2a50"/>
+      <circle cx="5.8" cy="6.2" r="0.9" fill="white"/>
+      <circle cx="10.8" cy="6.2" r="0.9" fill="white"/>
+      <!-- nose -->
+      <ellipse cx="9" cy="9.5" rx="1" ry="0.7" fill="#ff90a0"/>
+      <!-- mouth -->
+      <path d="M7.5 10.5 Q9 11.8 10.5 10.5" fill="none" stroke="#e07080" stroke-width="0.7" stroke-linecap="round"/>
+      <!-- whiskers -->
+      <line x1="0" y1="9.5" x2="5.5" y2="10" stroke="#d0d0d0" stroke-width="0.6" opacity="0.9"/>
+      <line x1="0" y1="11" x2="5.5" y2="11" stroke="#d0d0d0" stroke-width="0.6" opacity="0.9"/>
+      <line x1="12.5" y1="10" x2="18" y2="9.5" stroke="#d0d0d0" stroke-width="0.6" opacity="0.9"/>
+      <line x1="12.5" y1="11" x2="18" y2="11" stroke="#d0d0d0" stroke-width="0.6" opacity="0.9"/>
+      <!-- tail -->
+      <path d="M16 22 Q22 18 20 12 Q18 8 22 6" fill="none" stroke="#e0e0e0" stroke-width="2.5" stroke-linecap="round"/>
     </g>
     <rect class="button-bg" x="85" y="20" width="230" height="26" rx="13" fill="#ffffff" fill-opacity="0.35" stroke="#ffffff" stroke-opacity="0.6" stroke-width="1.5" style="transition: all 0.3s ease;"/>
     <text x="200" y="37.5" text-anchor="middle" font-family="'Playfair Display',Georgia,serif" font-style="italic" font-size="14" fill="#ffffff" letter-spacing="1" font-weight="600">Back to Home Page</text>
@@ -618,95 +633,6 @@ body::after {
 </div>
 
 <div class="top-nav">
-  <div class="title-card">
-    <div class="title-card-ghibli">
-      <svg style="position:absolute;inset:0;width:100%;height:100%;pointer-events:none;z-index:0" viewBox="0 0 400 70" xmlns="http://www.w3.org/2000/svg">
-        <!-- Sky bg -->
-        <rect x="0" y="0" width="400" height="70" fill="#d4eef7" opacity="0.5"/>
-        <!-- Clouds left -->
-        <ellipse cx="55"  cy="16" rx="28" ry="10" fill="white" opacity="0.85"/>
-        <ellipse cx="72"  cy="12" rx="20" ry="8"  fill="white" opacity="0.75"/>
-        <ellipse cx="36"  cy="15" rx="16" ry="7"  fill="white" opacity="0.7"/>
-        <!-- Clouds right -->
-        <ellipse cx="320" cy="14" rx="30" ry="10" fill="white" opacity="0.8"/>
-        <ellipse cx="340" cy="10" rx="20" ry="8"  fill="white" opacity="0.7"/>
-        <ellipse cx="298" cy="13" rx="18" ry="7"  fill="white" opacity="0.65"/>
-        <!-- Grass bottom strip -->
-        <path d="M0 54 Q80 44 160 52 Q240 60 320 48 Q360 42 400 50 L400 70 L0 70Z" fill="#a8cc98" opacity="0.7"/>
-        <path d="M0 60 Q100 52 200 58 Q300 64 400 56 L400 70 L0 70Z" fill="#8ec878" opacity="0.85"/>
-
-        <!-- Orange cat (left) sitting on grass -->
-        <g transform="translate(22,42)">
-          <!-- body -->
-          <ellipse cx="9" cy="18" rx="8" ry="9" fill="#e8720a"/>
-          <!-- tummy -->
-          <ellipse cx="9" cy="20" rx="4.5" ry="5" fill="#f5c08a" opacity="0.7"/>
-          <!-- head -->
-          <ellipse cx="9" cy="8" rx="7.5" ry="7" fill="#e8720a"/>
-          <!-- ears -->
-          <polygon points="3,3 1,-2 6,1"  fill="#e8720a"/>
-          <polygon points="15,3 17,-2 12,1" fill="#e8720a"/>
-          <polygon points="3.5,2.5 2.2,-0.8 5.5,1.2" fill="#f0a0a0" opacity="0.8"/>
-          <polygon points="14.5,2.5 15.8,-0.8 12.5,1.2" fill="#f0a0a0" opacity="0.8"/>
-          <!-- eyes (happy squint) -->
-          <path d="M5.5 8 Q7 6.5 8.5 8"  fill="none" stroke="#1a0a00" stroke-width="1.2" stroke-linecap="round"/>
-          <path d="M9.5 8 Q11 6.5 12.5 8" fill="none" stroke="#1a0a00" stroke-width="1.2" stroke-linecap="round"/>
-          <!-- nose -->
-          <ellipse cx="9" cy="10" rx="1" ry="0.7" fill="#e05070"/>
-          <!-- mouth -->
-          <path d="M7.5 11 Q9 12.5 10.5 11" fill="none" stroke="#c03050" stroke-width="0.7" stroke-linecap="round"/>
-          <!-- whiskers -->
-          <line x1="0" y1="9.5" x2="5.5" y2="10"  stroke="#f5e0c0" stroke-width="0.6" opacity="0.9"/>
-          <line x1="0" y1="11"  x2="5.5" y2="11"   stroke="#f5e0c0" stroke-width="0.6" opacity="0.9"/>
-          <line x1="12.5" y1="10" x2="18" y2="9.5"  stroke="#f5e0c0" stroke-width="0.6" opacity="0.9"/>
-          <line x1="12.5" y1="11" x2="18" y2="11"   stroke="#f5e0c0" stroke-width="0.6" opacity="0.9"/>
-          <!-- tail curling up -->
-          <path d="M16 22 Q22 18 20 12 Q18 8 22 6" fill="none" stroke="#e8720a" stroke-width="2.5" stroke-linecap="round"/>
-        </g>
-
-        <!-- Grey cat (right) sitting on grass -->
-        <g transform="translate(358,42)">
-          <!-- body -->
-          <ellipse cx="9" cy="18" rx="8" ry="9" fill="#9090a8"/>
-          <!-- tummy -->
-          <ellipse cx="9" cy="20" rx="4.5" ry="5" fill="#d0d0e0" opacity="0.7"/>
-          <!-- head -->
-          <ellipse cx="9" cy="8" rx="7.5" ry="7" fill="#9090a8"/>
-          <!-- ears -->
-          <polygon points="3,3 1,-2 6,1"  fill="#9090a8"/>
-          <polygon points="15,3 17,-2 12,1" fill="#9090a8"/>
-          <polygon points="3.5,2.5 2.2,-0.8 5.5,1.2" fill="#e0b0c0" opacity="0.8"/>
-          <polygon points="14.5,2.5 15.8,-0.8 12.5,1.2" fill="#e0b0c0" opacity="0.8"/>
-          <!-- eyes (gentle dots) -->
-          <circle cx="7"  cy="8" r="1.6" fill="#2a2a3a"/>
-          <circle cx="11" cy="8" r="1.6" fill="#2a2a3a"/>
-          <circle cx="6.4" cy="7.4" r="0.6" fill="white"/>
-          <circle cx="10.4" cy="7.4" r="0.6" fill="white"/>
-          <!-- nose -->
-          <ellipse cx="9" cy="10" rx="1" ry="0.7" fill="#cc7090"/>
-          <!-- mouth -->
-          <path d="M7.5 11 Q9 12.5 10.5 11" fill="none" stroke="#aa5070" stroke-width="0.7" stroke-linecap="round"/>
-          <!-- whiskers -->
-          <line x1="0" y1="9.5" x2="5.5" y2="10"  stroke="#e0e0f0" stroke-width="0.6" opacity="0.9"/>
-          <line x1="0" y1="11"  x2="5.5" y2="11"   stroke="#e0e0f0" stroke-width="0.6" opacity="0.9"/>
-          <line x1="12.5" y1="10" x2="18" y2="9.5"  stroke="#e0e0f0" stroke-width="0.6" opacity="0.9"/>
-          <line x1="12.5" y1="11" x2="18" y2="11"   stroke="#e0e0f0" stroke-width="0.6" opacity="0.9"/>
-          <!-- tail curling up (mirror) -->
-          <path d="M2 22 Q-4 18 -2 12 Q0 8 -4 6" fill="none" stroke="#9090a8" stroke-width="2.5" stroke-linecap="round"/>
-        </g>
-      </svg>
-      <div class="title-names" style="position:relative;z-index:1">
-        Bushra <span class="amp">&amp;</span> Aamir
-      </div>
-      <div class="title-sub">
-        <span class="title-heart">✨</span>
-        <span class="title-page" id="titlePage">Page 1 of 615</span>
-        <span class="title-sep">·</span>
-        <span class="title-dates" id="titleDates"></span>
-        <span class="title-heart">✨</span>
-      </div>
-    </div>
-  </div>
   <div class="nav-row">
     <button class="nav-btn" id="prevBtnTop" onclick="goPage(currentPage-1)" disabled>&#8592;</button>
     <div class="select-wrap">
