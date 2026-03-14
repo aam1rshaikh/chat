@@ -272,10 +272,10 @@ body::after {
 .status-bar .time { font-size: 13px; font-weight: 700; }
 .status-icons { display: flex; align-items: center; gap: 6px; }
 .header {
-  background: rgba(50,0,60,0.92); padding: 6px 12px;
+  background: linear-gradient(180deg, rgba(185,0,100,0.95) 0%, rgba(160,0,110,0.9) 100%);
+  padding: 6px 12px;
   display: flex; align-items: center; gap: 10px; flex-shrink: 0;
-  border-bottom: 1px solid rgba(200,60,140,0.25);
-  backdrop-filter: blur(12px);
+  border-bottom: 1px solid rgba(220,60,140,0.2);
   position: sticky; top: 0; z-index: 10;
 }
 .back-btn { color: #ff80c0; font-size: 26px; cursor: pointer; line-height: 1; }
@@ -745,8 +745,7 @@ body::after {
       <svg width="22" height="22" viewBox="0 0 24 24" fill="none"><circle cx="12" cy="12" r="10" stroke="#ff80c0" stroke-width="1.8"/><line x1="12" y1="8" x2="12" y2="12" stroke="#ff80c0" stroke-width="1.8" stroke-linecap="round"/><line x1="12" y1="16" x2="12.01" y2="16" stroke="#ff80c0" stroke-width="2" stroke-linecap="round"/></svg>
     </div>
   </div>
-  <div class="messages-area" id="messagesArea">
-    <div id="chatHeartsLayer" style="position:absolute;inset:0;pointer-events:none;overflow:hidden;z-index:0">
+    <div id="chatHeartsLayer" style="position:absolute;top:0;left:0;right:0;bottom:0;pointer-events:none;overflow:hidden;z-index:2">
     <!-- Big blurry background hearts (like Instagram love theme) -->
     <svg width="100%" height="100%" style="position:absolute;inset:0;opacity:0.18" viewBox="0 0 390 700" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="xMidYMid slice">
       <defs><filter id="hblur"><feGaussianBlur stdDeviation="18"/></filter></defs>
@@ -759,7 +758,8 @@ body::after {
       <text x="100" y="700" font-size="120" fill="#dd0088" filter="url(#hblur)" opacity="0.4">♥</text>
     </svg>
   </div>
-    <div id="msgContainer"></div>
+  <div class="messages-area" id="messagesArea">
+        <div id="msgContainer"></div>
   </div>
   <button class="scroll-btn" id="scrollBtn" onclick="scrollToBottom()">&#8595;</button>
   <div class="phone-loading" id="phoneLoading">
