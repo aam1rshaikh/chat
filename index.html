@@ -701,8 +701,6 @@ body::after {
         <button class="custom-dropdown-trigger" onclick="toggleCustomDropdown()">
           <span id="customDropdownLabel">P1 • …</span>
         </button>
-        <div class="custom-dropdown-overlay" id="customDropdownOverlay" onclick="closeCustomDropdown()"></div>
-        <div class="custom-dropdown-list" id="customDropdownList"></div>
       </div>
     </div>
     <button class="nav-btn" id="nextBtnTop" onclick="goPage(currentPage+1)">&#8594;</button>
@@ -1020,36 +1018,54 @@ function jumpToPage() {
 }
 
 // ── Custom mobile dropdown ──────────────────────────────────
+// ── Custom mobile dropdown (appended to body to escape stacking contexts) ──
+let _ddOverlay = null, _ddList = null;
+
+function _initDropdownPortal() {
+  if (_ddOverlay) return;
+  _ddOverlay = document.createElement('div');
+  _ddOverlay.className = 'custom-dropdown-overlay';
+  _ddOverlay.onclick = closeCustomDropdown;
+  document.body.appendChild(_ddOverlay);
+
+  _ddList = document.createElement('div');
+  _ddList.className = 'custom-dropdown-list';
+  _ddList.id = 'customDropdownList';
+  document.body.appendChild(_ddList);
+}
+
 function buildCustomDropdown() {
-  const list = document.getElementById('customDropdownList');
-  if (!list) return;
-  list.innerHTML = '';
+  _initDropdownPortal();
+  _ddList.innerHTML = '';
   PAGE_LABELS.forEach((lbl, i) => {
     const item = document.createElement('div');
     item.className = 'custom-dropdown-item' + (i === 0 ? ' selected' : '');
     item.dataset.page = i + 1;
     item.innerHTML = '<span class="item-check">✓</span><span>P' + (i+1) + ' • ' + lbl + '</span>';
     item.onclick = () => { goPage(i + 1); closeCustomDropdown(); };
-    list.appendChild(item);
+    _ddList.appendChild(item);
   });
 }
+
 function updateCustomDropdown(page) {
   const label = document.getElementById('customDropdownLabel');
   if (label) label.textContent = 'P' + page + ' • ' + (PAGE_LABELS[page-1] || 'Page ' + page);
-  document.querySelectorAll('.custom-dropdown-item').forEach(item => {
+  if (_ddList) _ddList.querySelectorAll('.custom-dropdown-item').forEach(item => {
     item.classList.toggle('selected', parseInt(item.dataset.page) === page);
   });
 }
+
 function toggleCustomDropdown() {
-  const list = document.getElementById('customDropdownList');
-  const overlay = document.getElementById('customDropdownOverlay');
-  if (list.classList.contains('open')) { closeCustomDropdown(); return; }
-  list.classList.add('open'); overlay.classList.add('open');
-  setTimeout(() => { const s = list.querySelector('.selected'); if (s) s.scrollIntoView({block:'center'}); }, 50);
+  _initDropdownPortal();
+  if (_ddList.classList.contains('open')) { closeCustomDropdown(); return; }
+  _ddList.classList.add('open');
+  _ddOverlay.classList.add('open');
+  setTimeout(() => { const s = _ddList.querySelector('.selected'); if (s) s.scrollIntoView({block:'center'}); }, 50);
 }
+
 function closeCustomDropdown() {
-  document.getElementById('customDropdownList').classList.remove('open');
-  document.getElementById('customDropdownOverlay').classList.remove('open');
+  if (_ddList) _ddList.classList.remove('open');
+  if (_ddOverlay) _ddOverlay.classList.remove('open');
 }
 
 // ── Back to Home navigation ──
