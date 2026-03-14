@@ -747,15 +747,14 @@ body::after {
   </div>
     <div id="chatHeartsLayer" style="position:absolute;top:0;left:0;right:0;bottom:0;pointer-events:none;overflow:hidden;z-index:1">
     <!-- Big blurry background hearts (like Instagram love theme) -->
-    <svg width="100%" height="100%" style="position:absolute;inset:0;opacity:0.18" viewBox="0 0 390 700" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="xMidYMid slice">
-      <defs><filter id="hblur"><feGaussianBlur stdDeviation="18"/></filter></defs>
-      <!-- Large blurry hearts scattered -->
-      <text x="20"  y="220" font-size="180" fill="#cc0088" filter="url(#hblur)" opacity="0.7">♥</text>
-      <text x="180" y="480" font-size="210" fill="#aa0077" filter="url(#hblur)" opacity="0.6">♥</text>
-      <text x="260" y="160" font-size="130" fill="#dd0099" filter="url(#hblur)" opacity="0.55">♥</text>
-      <text x="-30" y="560" font-size="150" fill="#bb0088" filter="url(#hblur)" opacity="0.5">♥</text>
-      <text x="300" y="640" font-size="100" fill="#cc0077" filter="url(#hblur)" opacity="0.45">♥</text>
-      <text x="100" y="700" font-size="120" fill="#dd0088" filter="url(#hblur)" opacity="0.4">♥</text>
+    <svg width="100%" height="100%" style="position:absolute;inset:0;opacity:0.22" viewBox="0 0 390 700" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="xMidYMid slice">
+      <defs><filter id="hblur"><feGaussianBlur stdDeviation="5"/></filter></defs>
+      <text x="20"  y="220" font-size="180" fill="#b00070" filter="url(#hblur)" opacity="0.5">♥</text>
+      <text x="180" y="480" font-size="210" fill="#900060" filter="url(#hblur)" opacity="0.45">♥</text>
+      <text x="260" y="160" font-size="130" fill="#c00080" filter="url(#hblur)" opacity="0.4">♥</text>
+      <text x="-30" y="560" font-size="150" fill="#a00070" filter="url(#hblur)" opacity="0.4">♥</text>
+      <text x="300" y="640" font-size="100" fill="#b00075" filter="url(#hblur)" opacity="0.38">♥</text>
+      <text x="100" y="700" font-size="120" fill="#c00080" filter="url(#hblur)" opacity="0.35">♥</text>
     </svg>
   </div>
   <div class="messages-area" id="messagesArea">
@@ -1021,7 +1020,7 @@ function jumpToPage() {
       height:${size}px;
       pointer-events:none;
       opacity:${opacity};
-      filter: blur(${size > 80 ? 3 : 1.5}px);
+      filter: none;
       animation: instaDrift ${14 + Math.random()*10}s ease-in-out infinite alternate;
       animation-delay: -${Math.random()*12}s;
     `;
@@ -1041,16 +1040,16 @@ function jumpToPage() {
 
   // Place fixed hearts at specific positions (like insta — they barely move)
   const positions = [
-    [55, 8,  52, 0.55],   // large bottom-centre
-    [140, 72, 5,  0.5],   // huge bottom-left
-    [100, 62, 48, 0.45],  // large right-mid
-    [45, 18, 72, 0.5],    // small left-upper
-    [70, 80, 68, 0.42],   // medium right-upper
-    [35, 3,  35, 0.48],   // small far-left mid
-    [50, 48, 20, 0.44],   // medium centre-low
-    [90, 85, 78, 0.4],    // medium right-top
-    [30, 30, 58, 0.38],   // small left-lower
-    [65, 55, 10, 0.35],   // medium right-bottom
+    [55, 8,  52, 0.32],
+    [140, 72, 5,  0.28],
+    [100, 62, 48, 0.26],
+    [45, 18, 72, 0.3],
+    [70, 80, 68, 0.24],
+    [35, 3,  35, 0.28],
+    [50, 48, 20, 0.25],
+    [90, 85, 78, 0.22],
+    [30, 30, 58, 0.22],
+    [65, 55, 10, 0.2],
   ];
   positions.forEach(([size, left, bottom, op]) => makeHeart(size, left, bottom, op));
 })();
