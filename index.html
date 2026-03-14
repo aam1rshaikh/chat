@@ -305,7 +305,7 @@ body::after {
 
 .messages-area {
   flex: 1; overflow-y: scroll; padding: 12px 16px 8px 12px;
-  background: transparent;
+  background: transparent; isolation: isolate;
   display: flex; flex-direction: column; gap: 2px;
   scrollbar-width: thin; scrollbar-color: rgba(220,0,140,0.4) transparent;
   position: relative;
@@ -360,8 +360,8 @@ body::after {
   color: #fff; box-shadow: 0 2px 14px rgba(220,0,100,0.5);
 }
 .received .bubble {
-  background: rgba(60,10,70,0.75); color: #f5d0e8;
-  border: 1px solid rgba(200,80,160,0.2); backdrop-filter: blur(8px);
+  background: rgba(55,5,65,0.96); color: #f5d0e8;
+  border: 1px solid rgba(200,80,160,0.2);
 }
 .sent .bubble.solo   { border-radius: 20px; }
 .sent .bubble.first  { border-radius: 20px 20px 6px 20px; }
