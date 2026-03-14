@@ -431,21 +431,21 @@ body::after {
 }
 
 @media (max-width: 440px) {
-  /* Page scrolls naturally — no fixed viewport squishing */
+  /* Body scrolls normally — no viewport clamping */
   body {
-    padding: 8px 0 100px;
+    padding: 10px 0 120px;
     gap: 10px;
     min-height: auto;
+    overflow-y: auto;
   }
 
-  /* Header / nav — normal flow, scrolls away */
+  /* Compact nav elements */
   .top-nav { padding: 0 10px; gap: 5px; max-width: 100%; }
   .title-card { padding: 6px 12px 5px; }
   .title-names { font-size: 13px; }
   .title-page { font-size: 9px; }
   .title-dates { font-size: 10px; }
   .title-heart { display: none; }
-
   .nav-row { gap: 4px; }
   .select-wrap { flex: 1; min-width: 0; }
   .nav-btn { padding: 5px 9px; font-size: 12px; }
@@ -457,23 +457,26 @@ body::after {
   .jump-input { width: 56px; font-size: 10px; padding: 5px 6px; }
   .jump-btn { padding: 5px 9px; font-size: 12px; }
 
-  /* Phone fills full width, tall enough to feel like a real chat screen */
+  /* Phone: keep the rounded frame, just make it wide + tall on mobile */
   .phone {
-    width: 100vw;
-    height: 88svh;
-    min-height: 600px;
-    border-radius: 0;
-    box-shadow: none;
+    width: calc(100vw - 12px);   /* small margin each side so border-radius shows */
+    height: 82svh;               /* tall but not full — user can see it all at once */
+    min-height: 580px;
+    border-radius: 36px;         /* keep the rounded phone frame */
+    box-shadow:
+      0 0 0 5px #1e0022,
+      0 0 0 7px #2e0038,
+      0 0 0 9px rgba(180,0,120,0.15),
+      0 10px 30px rgba(120,0,80,0.6);
     flex-shrink: 0;
   }
 
-  /* Bottom nav stays below the phone, scrollable */
   .bottom-nav { display: flex; max-width: 100%; padding: 0 10px; }
   .status-bar { display: flex; }
   .input-bar { padding: 6px 10px 16px; }
   .scroll-btn { bottom: 72px; right: 12px; width: 34px; height: 34px; font-size: 16px; }
 
-  /* Ghibli scenery stays at bottom of page */
+  /* Hide fixed Ghibli scenery on mobile — it overlaps content */
   body > div[style*="position:fixed;bottom:0"] { display: none; }
 }
 </style>
