@@ -145,7 +145,7 @@ body::after {
   width: 100%; justify-content: center;
 }
 .jump-label {
-  font-size: 11px; color: #5a7a50; font-weight: 700;
+  font-size: 11px; color: #5a7a50;
   font-family: 'Inter', sans-serif; letter-spacing: 0.3px; white-space: nowrap;
 }
 .jump-input {
@@ -154,7 +154,6 @@ body::after {
   border: 1.5px solid rgba(100,160,80,0.55);
   color: #3a5c30;
   padding: 7px 10px; border-radius: 20px; font-size: 12px;
-  font-weight: 700;
   outline: none; font-family: 'Inter', sans-serif; text-align: center;
   backdrop-filter: blur(8px);
   appearance: none; -webkit-appearance: none;
@@ -170,7 +169,6 @@ body::after {
   border: 1.5px solid rgba(100,160,80,0.55);
   color: #4a7a40;
   padding: 7px 18px; border-radius: 20px; font-size: 13px;
-  font-weight: 700;
   cursor: pointer; font-family: 'Inter', sans-serif;
   transition: all 0.2s; white-space: nowrap;
   backdrop-filter: blur(8px); letter-spacing: 0.3px;
@@ -473,12 +471,14 @@ body::after {
   .select-wrap { flex: 1; min-width: 0; }
   .nav-btn { padding: 5px 9px; font-size: 12px; font-weight: 700; }
   .bookmark-btn { padding: 5px 9px; font-size: 12px; gap: 3px; font-weight: 700; }
-  .page-select { font-size: 10px; padding: 5px 4px 5px 20px; color: #1a3a10; background: rgba(220,245,210,0.95); font-weight: 700; }
+  .page-select { font-size: 10px; padding: 5px 4px 5px 20px; color: #1a3a10; background: rgba(220,245,210,0.95); font-weight: 700; display: none; }
+  .select-wrap::before { display: none; }
+  .custom-dropdown { display: block; }
   .bookmark-badge { font-size: 10px; }
   .jump-row { gap: 4px; }
-  .jump-label { font-size: 10px; font-weight: 700; }
-  .jump-input { width: 56px; font-size: 10px; padding: 5px 6px; font-weight: 700; }
-  .jump-btn { padding: 5px 9px; font-size: 12px; font-weight: 700; }
+  .jump-label { font-size: 10px; }
+  .jump-input { width: 56px; font-size: 10px; padding: 5px 6px; }
+  .jump-btn { padding: 5px 9px; font-size: 12px; }
 
   /* Phone: keep the rounded frame, fills almost full viewport height */
   .phone {
@@ -501,71 +501,42 @@ body::after {
 
   /* Hide fixed Ghibli scenery on mobile — it overlaps content */
   body > div[style*="position:fixed;bottom:0"] { display: none; }
-
-  /* Hide native select, show custom dropdown on mobile */
-  .page-select { display: none; }
-  .select-wrap::before { display: none; }
-  .custom-dropdown { display: block; }
 }
 
 /* ── Custom mobile dropdown ── */
-.custom-dropdown {
-  display: none;
-  position: relative; width: 100%;
-}
+.custom-dropdown { display: none; position: relative; width: 100%; }
 .custom-dropdown-trigger {
-  width: 100%;
-  background: rgba(220,245,210,0.95);
-  border: 1.5px solid rgba(100,160,80,0.55);
-  color: #1a3a10;
-  padding: 5px 10px 5px 26px;
-  border-radius: 20px; font-size: 10px;
-  font-weight: 700;
-  cursor: pointer; outline: none;
-  font-family: 'Inter', sans-serif;
-  letter-spacing: 0.2px;
+  width: 100%; background: rgba(220,245,210,0.95);
+  border: 1.5px solid rgba(100,160,80,0.55); color: #1a3a10;
+  padding: 5px 10px 5px 26px; border-radius: 20px; font-size: 10px;
+  font-weight: 700; cursor: pointer; outline: none;
+  font-family: 'Inter', sans-serif; letter-spacing: 0.2px;
   box-shadow: 0 2px 8px rgba(100,160,80,0.2);
   text-overflow: ellipsis; overflow: hidden; white-space: nowrap;
-  text-align: left;
-  position: relative;
+  text-align: left; position: relative;
 }
 .custom-dropdown-trigger::before {
-  content: '🌿';
-  position: absolute; left: 8px; top: 50%; transform: translateY(-50%);
-  font-size: 10px; pointer-events: none;
+  content: '🌿'; position: absolute; left: 8px; top: 50%;
+  transform: translateY(-50%); font-size: 10px; pointer-events: none;
 }
 .custom-dropdown-overlay {
-  display: none;
-  position: fixed; inset: 0;
-  background: rgba(0,0,0,0.45);
-  z-index: 9998;
+  display: none; position: fixed; inset: 0;
+  background: rgba(0,0,0,0.45); z-index: 9998;
 }
 .custom-dropdown-overlay.open { display: block; }
 .custom-dropdown-list {
-  display: none;
-  position: fixed;
-  left: 12px; right: 12px;
-  top: 50%; transform: translateY(-50%);
-  background: #d4f0c0;
-  border: 1.5px solid rgba(100,160,80,0.55);
-  border-radius: 16px;
-  overflow-y: auto;
-  max-height: 72vh;
-  z-index: 9999;
-  box-shadow: 0 8px 32px rgba(60,100,40,0.35);
-  padding: 6px 0;
+  display: none; position: fixed; left: 12px; right: 12px;
+  top: 50%; transform: translateY(-50%); background: #d4f0c0;
+  border: 1.5px solid rgba(100,160,80,0.55); border-radius: 16px;
+  overflow-y: auto; max-height: 72vh; z-index: 9999;
+  box-shadow: 0 8px 32px rgba(60,100,40,0.35); padding: 6px 0;
 }
 .custom-dropdown-list.open { display: block; }
 .custom-dropdown-item {
-  padding: 12px 18px;
-  font-family: 'Inter', sans-serif;
-  font-size: 14px;
-  font-weight: 700;
-  color: #1a3a10;
-  cursor: pointer;
+  padding: 12px 18px; font-family: 'Inter', sans-serif;
+  font-size: 14px; font-weight: 700; color: #1a3a10; cursor: pointer;
   border-bottom: 1px solid rgba(100,160,80,0.15);
-  display: flex; align-items: center; gap: 10px;
-  transition: background 0.15s;
+  display: flex; align-items: center; gap: 10px; transition: background 0.15s;
 }
 .custom-dropdown-item:last-child { border-bottom: none; }
 .custom-dropdown-item:active { background: rgba(100,160,80,0.2); }
@@ -948,7 +919,7 @@ function updateNav(){
     datesStr=ad+' \u2013 '+bd+', '+yr;
   }
   const td=document.getElementById('titleDates'); if(td) td.textContent=datesStr;
-  document.getElementById('pageCounter').textContent=p+'\u2022 '+NUM_PAGES;
+  document.getElementById('pageCounter').textContent=p+' \u2022 '+NUM_PAGES;
   updateCustomDropdown(p);
 }
 
@@ -1062,7 +1033,6 @@ function buildCustomDropdown() {
     list.appendChild(item);
   });
 }
-
 function updateCustomDropdown(page) {
   const label = document.getElementById('customDropdownLabel');
   if (label) label.textContent = 'P' + page + ' • ' + (PAGE_LABELS[page-1] || 'Page ' + page);
@@ -1070,22 +1040,13 @@ function updateCustomDropdown(page) {
     item.classList.toggle('selected', parseInt(item.dataset.page) === page);
   });
 }
-
 function toggleCustomDropdown() {
   const list = document.getElementById('customDropdownList');
   const overlay = document.getElementById('customDropdownOverlay');
-  if (list.classList.contains('open')) {
-    closeCustomDropdown();
-  } else {
-    list.classList.add('open');
-    overlay.classList.add('open');
-    setTimeout(() => {
-      const selected = list.querySelector('.selected');
-      if (selected) selected.scrollIntoView({ block: 'center' });
-    }, 50);
-  }
+  if (list.classList.contains('open')) { closeCustomDropdown(); return; }
+  list.classList.add('open'); overlay.classList.add('open');
+  setTimeout(() => { const s = list.querySelector('.selected'); if (s) s.scrollIntoView({block:'center'}); }, 50);
 }
-
 function closeCustomDropdown() {
   document.getElementById('customDropdownList').classList.remove('open');
   document.getElementById('customDropdownOverlay').classList.remove('open');
