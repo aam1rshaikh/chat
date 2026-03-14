@@ -449,61 +449,7 @@ body::after {
   letter-spacing: 1px; font-weight: 300;
 }
 
-@media (max-width: 440px) {
-  /* Body scrolls smoothly — no bouncing */
-  body {
-    padding: 10px 0 40px;
-    gap: 10px;
-    min-height: auto;
-    overflow-y: auto;
-    -webkit-overflow-scrolling: touch;
-    overscroll-behavior-y: none;
-  }
-
-  /* Compact nav elements */
-  .top-nav { padding: 0 10px; gap: 5px; max-width: 100%; }
-  .title-card { padding: 6px 12px 5px; }
-  .title-names { font-size: 13px; }
-  .title-page { font-size: 9px; }
-  .title-dates { font-size: 10px; }
-  .title-heart { display: none; }
-  .nav-row { gap: 4px; }
-  .select-wrap { flex: 1; min-width: 0; }
-  .nav-btn { padding: 5px 9px; font-size: 12px; font-weight: 700; }
-  .bookmark-btn { padding: 5px 9px; font-size: 12px; gap: 3px; font-weight: 700; }
-  .page-select { font-size: 10px; padding: 5px 4px 5px 20px; color: #1a3a10; background: rgba(220,245,210,0.95); font-weight: 700; display: none; }
-  .select-wrap::before { display: none; }
-  .custom-dropdown { display: block; }
-  .bookmark-badge { font-size: 10px; }
-  .jump-row { gap: 4px; }
-  .jump-label { font-size: 10px; }
-  .jump-input { width: 56px; font-size: 10px; padding: 5px 6px; }
-  .jump-btn { padding: 5px 9px; font-size: 12px; }
-
-  /* Phone: keep the rounded frame, fills almost full viewport height */
-  .phone {
-    width: calc(100vw - 12px);
-    height: 94svh;
-    min-height: 600px;
-    border-radius: 36px;
-    box-shadow:
-      0 0 0 5px #1e0022,
-      0 0 0 7px #2e0038,
-      0 0 0 9px rgba(180,0,120,0.15),
-      0 10px 30px rgba(120,0,80,0.6);
-    flex-shrink: 0;
-  }
-
-  .bottom-nav { display: flex; max-width: 100%; padding: 0 10px; }
-  .status-bar { display: flex; height: 24px; padding: 2px 14px 0; }
-  .input-bar { padding: 5px 10px 8px; }
-  .scroll-btn { bottom: 72px; right: 12px; width: 34px; height: 34px; font-size: 16px; }
-
-  /* Hide fixed Ghibli scenery on mobile — it overlaps content */
-  body > div[style*="position:fixed;bottom:0"] { display: none; }
-}
-
-/* ── Custom mobile dropdown ── */
+/* ── Custom mobile dropdown (hidden on desktop) ── */
 .custom-dropdown { display: none; position: relative; width: 100%; }
 .custom-dropdown-trigger {
   width: 100%; background: rgba(220,245,210,0.95);
@@ -543,6 +489,60 @@ body::after {
 .custom-dropdown-item.selected { background: #5cb85c; color: #fff; }
 .custom-dropdown-item .item-check { font-size: 13px; opacity: 0; flex-shrink: 0; }
 .custom-dropdown-item.selected .item-check { opacity: 1; }
+
+@media (max-width: 440px) {
+  /* Body scrolls smoothly — no bouncing */
+  body {
+    padding: 10px 0 40px;
+    gap: 10px;
+    min-height: auto;
+    overflow-y: auto;
+    -webkit-overflow-scrolling: touch;
+    overscroll-behavior-y: none;
+  }
+
+  /* Compact nav elements */
+  .top-nav { padding: 0 10px; gap: 5px; max-width: 100%; }
+  .title-card { padding: 6px 12px 5px; }
+  .title-names { font-size: 13px; }
+  .title-page { font-size: 9px; }
+  .title-dates { font-size: 10px; }
+  .title-heart { display: none; }
+  .nav-row { gap: 4px; }
+  .select-wrap { flex: 1; min-width: 0; }
+  .nav-btn { padding: 5px 9px; font-size: 12px; font-weight: 700; }
+  .bookmark-btn { padding: 5px 9px; font-size: 12px; gap: 3px; font-weight: 700; }
+  .page-select { display: none; }
+  .select-wrap::before { display: none; }
+  .custom-dropdown { display: block; }
+  .bookmark-badge { font-size: 10px; }
+  .jump-row { gap: 4px; }
+  .jump-label { font-size: 10px; }
+  .jump-input { width: 56px; font-size: 10px; padding: 5px 6px; }
+  .jump-btn { padding: 5px 9px; font-size: 12px; }
+
+  /* Phone: keep the rounded frame, fills almost full viewport height */
+  .phone {
+    width: calc(100vw - 12px);
+    height: 94svh;
+    min-height: 600px;
+    border-radius: 36px;
+    box-shadow:
+      0 0 0 5px #1e0022,
+      0 0 0 7px #2e0038,
+      0 0 0 9px rgba(180,0,120,0.15),
+      0 10px 30px rgba(120,0,80,0.6);
+    flex-shrink: 0;
+  }
+
+  .bottom-nav { display: flex; max-width: 100%; padding: 0 10px; }
+  .status-bar { display: flex; height: 24px; padding: 2px 14px 0; }
+  .input-bar { padding: 5px 10px 8px; }
+  .scroll-btn { bottom: 72px; right: 12px; width: 34px; height: 34px; font-size: 16px; }
+
+  /* Hide fixed Ghibli scenery on mobile — it overlaps content */
+  body > div[style*="position:fixed;bottom:0"] { display: none; }
+}
 </style>
 </head>
 <body>
@@ -698,7 +698,7 @@ body::after {
     <div class="select-wrap">
       <select class="page-select" id="pageSelect" onchange="goPage(parseInt(this.value))"></select>
       <div class="custom-dropdown" id="customDropdown">
-        <button class="custom-dropdown-trigger" id="customDropdownTrigger" onclick="toggleCustomDropdown()">
+        <button class="custom-dropdown-trigger" onclick="toggleCustomDropdown()">
           <span id="customDropdownLabel">P1 • …</span>
         </button>
         <div class="custom-dropdown-overlay" id="customDropdownOverlay" onclick="closeCustomDropdown()"></div>
