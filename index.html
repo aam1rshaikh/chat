@@ -431,12 +431,14 @@ body::after {
 }
 
 @media (max-width: 440px) {
-  /* Body scrolls normally — no viewport clamping */
+  /* Body scrolls smoothly — no bouncing */
   body {
-    padding: 10px 0 120px;
+    padding: 10px 0 40px;
     gap: 10px;
     min-height: auto;
     overflow-y: auto;
+    -webkit-overflow-scrolling: touch;
+    overscroll-behavior-y: none;
   }
 
   /* Compact nav elements */
@@ -457,12 +459,12 @@ body::after {
   .jump-input { width: 56px; font-size: 10px; padding: 5px 6px; }
   .jump-btn { padding: 5px 9px; font-size: 12px; }
 
-  /* Phone: keep the rounded frame, just make it wide + tall on mobile */
+  /* Phone: keep the rounded frame, fills almost full viewport height */
   .phone {
-    width: calc(100vw - 12px);   /* small margin each side so border-radius shows */
-    height: 82svh;               /* tall but not full — user can see it all at once */
-    min-height: 580px;
-    border-radius: 36px;         /* keep the rounded phone frame */
+    width: calc(100vw - 12px);
+    height: 94svh;
+    min-height: 600px;
+    border-radius: 36px;
     box-shadow:
       0 0 0 5px #1e0022,
       0 0 0 7px #2e0038,
