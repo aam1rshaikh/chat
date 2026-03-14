@@ -257,6 +257,7 @@ body::after {
   width: 390px; height: 844px;
   background: linear-gradient(180deg, #c0006e 0%, #9a0080 28%, #6e0075 58%, #420060 100%);
   border-radius: 55px;
+  isolation: isolate;
   box-shadow:
     0 0 0 12px #1e0022, 0 0 0 14px #2e0038,
     0 0 0 16px rgba(180,0,120,0.2),
@@ -305,7 +306,8 @@ body::after {
 
 .messages-area {
   flex: 1; overflow-y: scroll; padding: 12px 16px 8px 12px;
-  background: transparent; isolation: isolate;
+  background: transparent;
+  position: relative; z-index: 2;
   display: flex; flex-direction: column; gap: 2px;
   scrollbar-width: thin; scrollbar-color: rgba(220,0,140,0.4) transparent;
   position: relative;
@@ -607,8 +609,8 @@ body::after {
     <circle cx="1055" cy="127" r="2" fill="#2a4a18" opacity="0.6"/>
     <circle cx="1065" cy="127" r="2" fill="#2a4a18" opacity="0.6"/>
     <circle cx="320" cy="138" r="4" fill="#1a2a10" opacity="0.35"/>
-    <circle cx="328" cy="141" r="3" fill="#1a2a10" opacity="0.28"/>
-    <circle cx="860" cy="139" r="4" fill="#1a2a10" opacity="0.3"/>
+    <circle cx="328" cy="141" r="3" fill="#1a2a10" opacity="0.2"/>
+    <circle cx="860" cy="139" r="4" fill="#1a2a10" opacity="0.22"/>
     <circle cx="270" cy="100" r="2" fill="#ccff66" opacity="0.6"><animate attributeName="opacity" values="0.6;0.05;0.6" dur="2.3s" repeatCount="indefinite"/></circle>
     <circle cx="580" cy="110" r="2" fill="#aaff44" opacity="0.55"><animate attributeName="opacity" values="0.55;0.05;0.55" dur="1.8s" repeatCount="indefinite"/></circle>
     <circle cx="920" cy="105" r="2" fill="#ccff66" opacity="0.5"><animate attributeName="opacity" values="0.5;0.05;0.5" dur="2.7s" repeatCount="indefinite"/></circle>
@@ -726,7 +728,7 @@ body::after {
   <div class="status-bar">
     <span class="time">11:11</span>
     <div class="status-icons">
-      <svg width="17" height="12" viewBox="0 0 17 12" fill="#ffb0d8"><rect x="0" y="4" width="3" height="8" rx="1"/><rect x="4.5" y="2.5" width="3" height="9.5" rx="1"/><rect x="9" y="1" width="3" height="11" rx="1"/><rect x="13.5" y="0" width="3" height="12" rx="1" opacity="0.3"/></svg>
+      <svg width="17" height="12" viewBox="0 0 17 12" fill="#ffb0d8"><rect x="0" y="4" width="3" height="8" rx="1"/><rect x="4.5" y="2.5" width="3" height="9.5" rx="1"/><rect x="9" y="1" width="3" height="11" rx="1"/><rect x="13.5" y="0" width="3" height="12" rx="1" opacity="0.22"/></svg>
       <svg width="16" height="12" viewBox="0 0 24 24" fill="none"><path d="M1.5 8.5C5.5 4.5 10.5 2.5 12 2.5s6.5 2 10.5 6" stroke="#ffb0d8" stroke-width="2" stroke-linecap="round"/><path d="M4.5 11.5C7.5 8.5 10 7 12 7s4.5 1.5 7.5 4.5" stroke="#ffb0d8" stroke-width="2" stroke-linecap="round"/><path d="M7.5 14.5C9 13 10.5 12 12 12s3 1 4.5 2.5" stroke="#ffb0d8" stroke-width="2" stroke-linecap="round"/><circle cx="12" cy="18" r="1.5" fill="#ffb0d8"/></svg>
       <svg width="25" height="12" viewBox="0 0 25 12" fill="none"><rect x="0" y="1" width="22" height="10" rx="3" stroke="#ffb0d8" stroke-width="1.5"/><rect x="23" y="3.5" width="2" height="5" rx="1" fill="#ffb0d8" opacity="0.4"/><rect x="1.5" y="2.5" width="16" height="7" rx="1.5" fill="#ffb0d8"/></svg>
     </div>
@@ -745,7 +747,7 @@ body::after {
       <svg width="22" height="22" viewBox="0 0 24 24" fill="none"><circle cx="12" cy="12" r="10" stroke="#ff80c0" stroke-width="1.8"/><line x1="12" y1="8" x2="12" y2="12" stroke="#ff80c0" stroke-width="1.8" stroke-linecap="round"/><line x1="12" y1="16" x2="12.01" y2="16" stroke="#ff80c0" stroke-width="2" stroke-linecap="round"/></svg>
     </div>
   </div>
-    <div id="chatHeartsLayer" style="position:absolute;top:0;left:0;right:0;bottom:0;pointer-events:none;overflow:hidden;z-index:1">
+    <div id="chatHeartsLayer" style="position:absolute;top:0;left:0;right:0;bottom:0;pointer-events:none;overflow:hidden;z-index:0">
     <!-- Clean solid hearts — no blur, like Instagram love theme -->
     <svg width="100%" height="100%" style="position:absolute;inset:0" viewBox="0 0 390 700" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="xMidYMid slice">
       <defs>
@@ -753,18 +755,18 @@ body::after {
         <radialGradient id="hg2" cx="38%" cy="30%" r="65%"><stop offset="0%" stop-color="#b050b8"/><stop offset="100%" stop-color="#702898"/></radialGradient>
       </defs>
       <!-- Large heart bottom-left -->
-      <path d="M155 670 C155 670 30 590 30 510 C30 464 62 438 95 438 C118 438 140 450 155 468 C170 450 192 438 215 438 C248 438 280 464 280 510 C280 590 155 670 155 670Z" fill="url(#hg1)" opacity="0.38"/>
-      <ellipse cx="105" cy="468" rx="28" ry="18" fill="white" opacity="0.1" transform="rotate(-30 105 468)"/>
+      <path d="M155 670 C155 670 30 590 30 510 C30 464 62 438 95 438 C118 438 140 450 155 468 C170 450 192 438 215 438 C248 438 280 464 280 510 C280 590 155 670 155 670Z" fill="url(#hg1)" opacity="0.2"/>
+      <ellipse cx="105" cy="468" rx="28" ry="18" fill="white" opacity="0.08" transform="rotate(-30 105 468)"/>
       <!-- Medium heart right-centre -->
-      <path d="M310 390 C310 390 230 335 230 285 C230 255 250 238 272 238 C288 238 302 246 310 258 C318 246 332 238 348 238 C370 238 390 255 390 285 C390 335 310 390 310 390Z" fill="url(#hg2)" opacity="0.34"/>
-      <ellipse cx="255" cy="252" rx="20" ry="13" fill="white" opacity="0.1" transform="rotate(-30 255 252)"/>
+      <path d="M310 390 C310 390 230 335 230 285 C230 255 250 238 272 238 C288 238 302 246 310 258 C318 246 332 238 348 238 C370 238 390 255 390 285 C390 335 310 390 310 390Z" fill="url(#hg2)" opacity="0.24"/>
+      <ellipse cx="255" cy="252" rx="20" ry="13" fill="white" opacity="0.08" transform="rotate(-30 255 252)"/>
       <!-- Small heart top-left -->
-      <path d="M80 200 C80 200 22 162 22 126 C22 104 36 92 52 92 C63 92 73 98 80 108 C87 98 97 92 108 92 C124 92 138 104 138 126 C138 162 80 200 80 200Z" fill="url(#hg1)" opacity="0.3"/>
-      <ellipse cx="50" cy="108" rx="16" ry="10" fill="white" opacity="0.1" transform="rotate(-30 50 108)"/>
+      <path d="M80 200 C80 200 22 162 22 126 C22 104 36 92 52 92 C63 92 73 98 80 108 C87 98 97 92 108 92 C124 92 138 104 138 126 C138 162 80 200 80 200Z" fill="url(#hg1)" opacity="0.22"/>
+      <ellipse cx="50" cy="108" rx="16" ry="10" fill="white" opacity="0.08" transform="rotate(-30 50 108)"/>
       <!-- Tiny heart top-right -->
-      <path d="M340 130 C340 130 298 104 298 78 C298 62 308 54 320 54 C329 54 336 58 340 65 C344 58 351 54 360 54 C372 54 382 62 382 78 C382 104 340 130 340 130Z" fill="url(#hg2)" opacity="0.28"/>
+      <path d="M340 130 C340 130 298 104 298 78 C298 62 308 54 320 54 C329 54 336 58 340 65 C344 58 351 54 360 54 C372 54 382 62 382 78 C382 104 340 130 340 130Z" fill="url(#hg2)" opacity="0.2"/>
       <!-- Medium heart centre-bottom -->
-      <path d="M200 580 C200 580 138 538 138 500 C138 476 154 462 172 462 C185 462 196 470 200 480 C204 470 215 462 228 462 C246 462 262 476 262 500 C262 538 200 580 200 580Z" fill="url(#hg1)" opacity="0.3"/>
+      <path d="M200 580 C200 580 138 538 138 500 C138 476 154 462 172 462 C185 462 196 470 200 480 C204 470 215 462 228 462 C246 462 262 476 262 500 C262 538 200 580 200 580Z" fill="url(#hg1)" opacity="0.22"/>
     </svg>
   </div>
   <div class="messages-area" id="messagesArea">
@@ -1012,56 +1014,6 @@ function jumpToPage() {
   goPage(n);
   inp.value = '';
 }
-
-// ── Instagram love theme: large soft hearts drift very slowly ──
-(function spawnChatHearts() {
-  const layer = document.getElementById('chatHeartsLayer');
-  if (!layer) return;
-
-  // Each heart: slightly lighter/softer purple than background — frosted look
-  function makeHeart(size, leftPct, bottomPct, opacity) {
-    const id = 'hg' + Math.random().toString(36).slice(2);
-    const h = document.createElement('div');
-    h.style.cssText = `
-      position:absolute;
-      left:${leftPct}%;
-      bottom:${bottomPct}%;
-      width:${size}px;
-      height:${size}px;
-      pointer-events:none;
-      opacity:${opacity};
-      filter: none;
-      animation: instaDrift ${14 + Math.random()*10}s ease-in-out infinite alternate;
-      animation-delay: -${Math.random()*12}s;
-    `;
-    h.innerHTML = `<svg xmlns="http://www.w3.org/2000/svg" width="${size}" height="${size}" viewBox="0 0 100 92">
-      <defs>
-        <radialGradient id="${id}" cx="38%" cy="30%" r="65%">
-          <stop offset="0%"   stop-color="#c060c8"/>
-          <stop offset="100%" stop-color="#8030a0"/>
-        </radialGradient>
-      </defs>
-      <path d="M50 88 C50 88 4 54 4 28 C4 12 15 2 29 2 C39 2 47 8 50 15 C53 8 61 2 71 2 C85 2 96 12 96 28 C96 54 50 88 50 88Z" fill="url(#${id})"/>
-      <ellipse cx="32" cy="22" rx="10" ry="6" fill="white" opacity="0.12" transform="rotate(-30 32 22)"/>
-    </svg>`;
-    layer.appendChild(h);
-  }
-
-  // Place fixed hearts at specific positions (like insta — they barely move)
-  const positions = [
-    [55, 8,  52, 0.32],
-    [140, 72, 5,  0.28],
-    [100, 62, 48, 0.26],
-    [45, 18, 72, 0.3],
-    [70, 80, 68, 0.24],
-    [35, 3,  35, 0.28],
-    [50, 48, 20, 0.25],
-    [90, 85, 78, 0.22],
-    [30, 30, 58, 0.22],
-    [65, 55, 10, 0.2],
-  ];
-  positions.forEach(([size, left, bottom, op]) => makeHeart(size, left, bottom, op));
-})();
 
 // ── Back to Home navigation ──
 function goBackToHome() {
