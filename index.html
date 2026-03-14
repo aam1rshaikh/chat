@@ -431,8 +431,14 @@ body::after {
 }
 
 @media (max-width: 440px) {
-  body { padding: 8px 0 8px; gap: 6px; }
+  /* Page scrolls naturally — no fixed viewport squishing */
+  body {
+    padding: 8px 0 100px;
+    gap: 10px;
+    min-height: auto;
+  }
 
+  /* Header / nav — normal flow, scrolls away */
   .top-nav { padding: 0 10px; gap: 5px; max-width: 100%; }
   .title-card { padding: 6px 12px 5px; }
   .title-names { font-size: 13px; }
@@ -451,22 +457,24 @@ body::after {
   .jump-input { width: 56px; font-size: 10px; padding: 5px 6px; }
   .jump-btn { padding: 5px 9px; font-size: 12px; }
 
+  /* Phone fills full width, tall enough to feel like a real chat screen */
   .phone {
-    width: calc(100vw - 16px);
-    height: calc(100svh - 155px);
-    min-height: 500px;
-    border-radius: 36px;
-    box-shadow:
-      0 0 0 7px #1e0022,
-      0 0 0 9px #2e0038,
-      0 0 0 11px rgba(180,0,120,0.15),
-      0 12px 40px rgba(120,0,80,0.6);
+    width: 100vw;
+    height: 88svh;
+    min-height: 600px;
+    border-radius: 0;
+    box-shadow: none;
+    flex-shrink: 0;
   }
 
+  /* Bottom nav stays below the phone, scrollable */
   .bottom-nav { display: flex; max-width: 100%; padding: 0 10px; }
   .status-bar { display: flex; }
-  .input-bar { padding: 6px 10px 12px; }
-  .scroll-btn { bottom: 68px; right: 12px; width: 34px; height: 34px; font-size: 16px; }
+  .input-bar { padding: 6px 10px 16px; }
+  .scroll-btn { bottom: 72px; right: 12px; width: 34px; height: 34px; font-size: 16px; }
+
+  /* Ghibli scenery stays at bottom of page */
+  body > div[style*="position:fixed;bottom:0"] { display: none; }
 }
 </style>
 </head>
