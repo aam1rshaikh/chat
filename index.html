@@ -845,7 +845,7 @@ function updateNav(){
   ['nextBtnTop','nextBtnBot'].forEach(id=>document.getElementById(id).disabled=p===NUM_PAGES);
   document.getElementById('pageSelect').value=p;
   // Update title card
-  document.getElementById('titlePage').textContent='Page '+p+' of '+NUM_PAGES;
+  const tp=document.getElementById('titlePage'); if(tp) tp.textContent='Page '+p+' of '+NUM_PAGES;
   const lbl=PAGE_LABELS[p-1];
   const parts=lbl.split(' \u2013 ');
   let datesStr=lbl;
@@ -855,7 +855,7 @@ function updateNav(){
     const ad=a.replace(' '+yr,''); const bd=b.replace(' '+yr,'');
     datesStr=ad+' \u2013 '+bd+', '+yr;
   }
-  document.getElementById('titleDates').textContent=datesStr;
+  const td=document.getElementById('titleDates'); if(td) td.textContent=datesStr;
   document.getElementById('pageCounter').textContent=p+' \u2022 '+NUM_PAGES;
 }
 
